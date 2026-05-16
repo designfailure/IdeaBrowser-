@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "millennials_house_buying_concierge",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 39,
+  "signal_band": "cold",
+  "summary": "Seeded envelope. A house-buying concierge that runs the search + offer + financing while you keep working. Live web research has not run yet; invoke 'npm run research -- --id millennials_house_buying_concierge' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "adept_ai",
+      "rationale": "Risk profile overlaps Adept AI (Commoditization by foundational models; no proprietary data moat; capital intensity)."
+    },
+    {
+      "failure_id": "jasper_ai",
+      "rationale": "Risk profile overlaps Jasper AI (Rapid commoditization by GPT-4/Claude; no retention loop; no workflow moat)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-millennials_house_buying_concierge-1900111299",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 39,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

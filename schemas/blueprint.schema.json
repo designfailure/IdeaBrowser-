@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://idea-browser.local/schemas/blueprint.schema.json",
+  "title": "Corsair Venture Blueprint",
+  "description": "Frozen 15-field venture blueprint contract.",
+  "type": "object",
+  "required": [
+    "id",
+    "vertical",
+    "version",
+    "hook",
+    "core_problem",
+    "emotional_driver",
+    "ai_leverage",
+    "business_model",
+    "monetization_logic",
+    "distribution_strategy",
+    "retention_loop",
+    "moat_potential",
+    "scalability_score",
+    "scalability_rationale",
+    "billion_dollar_path",
+    "failure_avoidance",
+    "validation_principle",
+    "validation_invocation",
+    "technical_mvp_sketch",
+    "ui_ux_operating_model",
+    "ui_ux_invocation"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "vertical": {
+      "type": "string",
+      "enum": [
+        "finance", "insurance", "mobility", "leisure", "home_appliances",
+        "wearables", "travel", "pets", "family", "teenagers",
+        "millennials", "gen_z", "robotics_physical_ai"
+      ]
+    },
+    "version": { "type": "string" },
+    "hook": { "type": "string", "minLength": 8, "maxLength": 200 },
+    "core_problem": { "type": "string", "minLength": 20 },
+    "emotional_driver": {
+      "type": "string",
+      "enum": ["fear", "status", "autonomy", "belonging", "mastery", "convenience", "identity"]
+    },
+    "ai_leverage": { "type": "string", "minLength": 20 },
+    "business_model": {
+      "type": "string",
+      "enum": [
+        "subscription", "marketplace", "RaaS", "embedded_finance", "outcome_based",
+        "transaction_fee", "consumption", "licensing", "data_network",
+        "hardware_plus_software", "agency_as_software", "co_op"
+      ]
+    },
+    "monetization_logic": { "type": "string", "minLength": 10 },
+    "distribution_strategy": { "type": "string", "minLength": 10 },
+    "retention_loop": { "type": "string", "minLength": 10 },
+    "moat_potential": {
+      "type": "object",
+      "required": ["class", "rationale"],
+      "properties": {
+        "class": {
+          "type": "string",
+          "enum": [
+            "data", "network", "regulatory", "switching_cost", "brand",
+            "economy_of_scale", "process", "embedded_workflow"
+          ]
+        },
+        "rationale": { "type": "string", "minLength": 10 }
+      }
+    },
+    "scalability_score": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "scalability_rationale": { "type": "string", "minLength": 10 },
+    "billion_dollar_path": { "type": "string", "minLength": 20 },
+    "failure_avoidance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^(fake_ai_trap|thin_wrapper_syndrome|hardware_scaling_chasm|unsustainable_unit_economics|regulatory_blind_spot|commoditization_collapse|market_timing_failure|governance_failure):.+"
+      }
+    },
+    "validation_principle": {
+      "type": "string",
+      "enum": ["medici", "rothschild", "buffett"]
+    },
+    "validation_invocation": { "type": "string", "minLength": 10 },
+    "technical_mvp_sketch": {
+      "type": "object",
+      "required": ["stack", "agents", "data", "infra", "hitl"],
+      "properties": {
+        "stack": { "type": "string" },
+        "agents": { "type": "array", "items": { "type": "string" } },
+        "data": { "type": "string" },
+        "infra": { "type": "string" },
+        "hitl": { "type": "string" },
+        "perception": { "type": "string" },
+        "control": { "type": "string" },
+        "sim": { "type": "string" },
+        "hardware_abstraction": { "type": "string" },
+        "safety": { "type": "string" }
+      }
+    },
+    "ui_ux_operating_model": {
+      "type": "string",
+      "enum": ["conversational", "agent_mediated", "invisible", "dashboard_plus_chat", "voice_first", "ar_overlay"]
+    },
+    "ui_ux_invocation": { "type": "string", "minLength": 10 },
+    "research_envelope": {
+      "anyOf": [
+        { "type": "string" },
+        { "type": "null" }
+      ]
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "vertical": { "const": "robotics_physical_ai" } } },
+      "then": {
+        "properties": {
+          "technical_mvp_sketch": {
+            "required": ["perception", "control", "sim", "hardware_abstraction", "safety"]
+          }
+        }
+      }
+    }
+  ]
+}

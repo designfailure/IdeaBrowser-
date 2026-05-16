@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "robotics_last_mile_delivery_sidewalk",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 69,
+  "signal_band": "warm",
+  "summary": "Seeded envelope. Sidewalk delivery robots that handle the last 1km in dense metros at $2/delivery. Live web research has not run yet; invoke 'npm run research -- --id robotics_last_mile_delivery_sidewalk' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "lilium",
+      "rationale": "Risk profile overlaps Lilium (Hardware scaling chasm; regulatory delays; capital intensity exceeded projections)."
+    },
+    {
+      "failure_id": "northvolt",
+      "rationale": "Risk profile overlaps Northvolt (Manufacturing execution failure; scaling complexity underestimated)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-robotics_last_mile_delivery_sidewalk-4133258234",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 69,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

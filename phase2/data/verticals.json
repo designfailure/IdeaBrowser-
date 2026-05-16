@@ -1,0 +1,18 @@
+{
+  "$schema_version": "1.0.0",
+  "verticals": [
+    { "id": "finance", "name": "Finance", "icon": "Landmark", "color": "#10b981", "tagline": "Embedded finance, neobanks, and AI underwriting." },
+    { "id": "insurance", "name": "Insurance", "icon": "ShieldCheck", "color": "#0ea5e9", "tagline": "Parametric, embedded, and outcome-based coverage." },
+    { "id": "mobility", "name": "Mobility", "icon": "Car", "color": "#f59e0b", "tagline": "EV, micromobility, freight, and curb intelligence." },
+    { "id": "leisure", "name": "Leisure", "icon": "Music", "color": "#a855f7", "tagline": "Games, events, indie creators, hobbies." },
+    { "id": "home_appliances", "name": "Home Appliances", "icon": "Home", "color": "#6366f1", "tagline": "Predictive home + energy + safety automation." },
+    { "id": "wearables", "name": "Wearables", "icon": "Activity", "color": "#ec4899", "tagline": "Continuous health + performance + safety wearables." },
+    { "id": "travel", "name": "Travel", "icon": "Plane", "color": "#14b8a6", "tagline": "Travel agents, loyalty, visa, and disruption." },
+    { "id": "pets", "name": "Pets", "icon": "PawPrint", "color": "#f97316", "tagline": "Pet health, care, and end-of-life concierge." },
+    { "id": "family", "name": "Family", "icon": "Users", "color": "#8b5cf6", "tagline": "Household ops, school, and intergenerational." },
+    { "id": "teenagers", "name": "Teenagers", "icon": "GraduationCap", "color": "#06b6d4", "tagline": "Education, mental health, first jobs, safety." },
+    { "id": "millennials", "name": "Millennials", "icon": "Briefcase", "color": "#ef4444", "tagline": "Burnout, house buying, fertility, retirement." },
+    { "id": "gen_z", "name": "Gen-Z", "icon": "Smartphone", "color": "#eab308", "tagline": "Creator, micro-work, mental health, dating." },
+    { "id": "robotics_physical_ai", "name": "Robotics & Physical AI", "icon": "Bot", "color": "#84cc16", "tagline": "VLA-driven RaaS for warehouses, kitchens, homes." }
+  ]
+}

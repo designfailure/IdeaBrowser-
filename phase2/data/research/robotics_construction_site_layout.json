@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "robotics_construction_site_layout",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 31,
+  "signal_band": "cold",
+  "summary": "Seeded envelope. An autonomous layout robot that prints floor plans on slabs in 1 hour vs 8 hours of human surveyors. Live web research has not run yet; invoke 'npm run research -- --id robotics_construction_site_layout' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "lilium",
+      "rationale": "Risk profile overlaps Lilium (Hardware scaling chasm; regulatory delays; capital intensity exceeded projections)."
+    },
+    {
+      "failure_id": "northvolt",
+      "rationale": "Risk profile overlaps Northvolt (Manufacturing execution failure; scaling complexity underestimated)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-robotics_construction_site_layout-2572183791",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 31,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

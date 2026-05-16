@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "robotics_inspection_drone_industrial",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 39,
+  "signal_band": "cold",
+  "summary": "Seeded envelope. Autonomous inspection drones that monitor wind farms + refineries without human pilots. Live web research has not run yet; invoke 'npm run research -- --id robotics_inspection_drone_industrial' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "lilium",
+      "rationale": "Risk profile overlaps Lilium (Hardware scaling chasm; regulatory delays; capital intensity exceeded projections)."
+    },
+    {
+      "failure_id": "northvolt",
+      "rationale": "Risk profile overlaps Northvolt (Manufacturing execution failure; scaling complexity underestimated)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-robotics_inspection_drone_industrial-3479449334",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 39,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

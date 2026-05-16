@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+.env*
+.DS_Store
+.vercel
+phase2/data/research/_cache/
+.cursor/*.log
+*.tsbuildinfo

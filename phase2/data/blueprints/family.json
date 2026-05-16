@@ -1,0 +1,322 @@
+[
+  {
+    "id": "family_household_logistics_brain",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A household OS that catches the soccer pickup conflict before either parent realizes there's one.",
+    "core_problem": "44M dual-income US households juggle 12-20 weekly logistics events; existing apps (Cozi, Skylight) are calendars, not brains.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Calendar + intent agent reads emails/texts; planner agent resolves conflicts + assigns roles; communication agent confirms with each parent.",
+    "business_model": "subscription",
+    "monetization_logic": "$15-25/mo per household; family-of-4 ARPU $20.",
+    "distribution_strategy": "Parent community + employer family-benefits channel.",
+    "retention_loop": "Per-family routine + history lock.",
+    "moat_potential": { "class": "switching_cost", "rationale": "Family workflows + history lock; switching means rebuilding." },
+    "scalability_score": 8,
+    "scalability_rationale": "Software + email integration; community + B2B2C channels.",
+    "billion_dollar_path": "Stage 1: dual-income households. Stage 2: full family operations + finances. Stage 3: AI family ops bundled with insurance + benefits.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own intent + planning engines, not a calendar UI",
+      "commoditization_collapse: family-graph integration moat"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-family intent data is asymmetric; calendar apps see only events.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Gmail/Outlook APIs",
+      "agents": ["hermes:intent_extractor", "openclaw:planning_dag", "hermes:family_messenger"],
+      "data": "Per-family routines, calendar history, conflict outcomes.",
+      "infra": "AWS + RDS; GDPR + COPPA-aligned.",
+      "hitl": "Parent approves any external coordination (e.g., scheduling with another family)."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Parent says 'Tuesday's broken'; agent reshuffles + texts the other parent."
+  },
+  {
+    "id": "family_school_assignments_copilot",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A family copilot that turns 7 school portals into one Sunday-night digest with the week's homework + permission slips.",
+    "core_problem": "55M US K-12 families navigate Schoology, Canvas, ClassDojo, Seesaw, etc.; consolidated visibility doesn't exist.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Portal-aggregation agent ingests per-school feeds; planner agent renders unified weekly view; reminder agent texts the right parent.",
+    "business_model": "subscription",
+    "monetization_logic": "$9/mo per family + school district enterprise tier.",
+    "distribution_strategy": "School district + PTA partnerships.",
+    "retention_loop": "Per-family + per-school history lock.",
+    "moat_potential": { "class": "embedded_workflow", "rationale": "Per-district integrations are sticky." },
+    "scalability_score": 7,
+    "scalability_rationale": "Per-district sales; software margins after.",
+    "billion_dollar_path": "Stage 1: D2C families. Stage 2: district-wide. Stage 3: full K-12 family OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: FERPA + COPPA + state student privacy",
+      "thin_wrapper_syndrome: own integrations + planning"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for K-12 family + school; both win.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + portal scrapers",
+      "agents": ["hermes:portal_aggregator", "openclaw:planning_dag", "hermes:reminder_router"],
+      "data": "Per-district feeds, per-family preferences.",
+      "infra": "AWS + RDS; FERPA + COPPA compliant.",
+      "hitl": "School district approves data integration; parent approves any external sharing."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Parent receives Sunday-night digest + daily reminders."
+  },
+  {
+    "id": "family_meal_planning_dietary",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A meal-planning brain that handles celiac sister, peanut allergy nephew, vegan mom — and still gets dinner on the table by 6.",
+    "core_problem": "30% of US households have multiple dietary restrictions; existing meal planners (Plan to Eat) ignore allergens.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Diet + allergen agent intersects family profiles; recipe agent generates compliant meals; grocery agent orders via Instacart.",
+    "business_model": "subscription",
+    "monetization_logic": "$12/mo + Instacart affiliate revenue.",
+    "distribution_strategy": "Allergy + dietitian partnerships + community channels.",
+    "retention_loop": "Per-family preference + recipe corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-family allergen-safe recipe corpus is unique." },
+    "scalability_score": 7,
+    "scalability_rationale": "Software + grocery API; community channel scales.",
+    "billion_dollar_path": "Stage 1: D2C families. Stage 2: full grocery + meal kit. Stage 3: nutrition + insurance bundle.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: FDA allergen labeling alignment",
+      "thin_wrapper_syndrome: own dietary intersection engine"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-family dietary intersection data is asymmetric; recipe sites are generic.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Instacart API",
+      "agents": ["hermes:dietary_aggregator", "openclaw:recipe_dag", "hermes:grocery_router"],
+      "data": "Per-family dietary profiles, recipe corpus, grocery history.",
+      "infra": "AWS + RDS; SOC 2.",
+      "hitl": "Dietitian advisor reviews any new allergen protocol."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Parent says 'plan this week's dinners'; agent returns + orders groceries."
+  },
+  {
+    "id": "family_childcare_marketplace_safety",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A childcare marketplace where every sitter passes background + activity verification — and the price reflects it.",
+    "core_problem": "30M US working parents face childcare crisis; Care.com + Sittercity are listings + variable trust; safety incidents persist.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Background + reference verification agent; matching agent picks sitter for child + activity needs; monitoring agent ensures check-in/check-out.",
+    "business_model": "marketplace",
+    "monetization_logic": "20% take rate; insurance bundled.",
+    "distribution_strategy": "Employer family-benefits + community channels.",
+    "retention_loop": "Per-family trust corpus + sitter relationships lock.",
+    "moat_potential": { "class": "network", "rationale": "Two-sided trust + safety network compounds." },
+    "scalability_score": 7,
+    "scalability_rationale": "Per-metro cold-start; B2B benefits channel accelerates.",
+    "billion_dollar_path": "Stage 1: hourly sitters. Stage 2: nanny + tutor. Stage 3: full childcare + tutoring + insurance OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state background check + worker classification",
+      "unsustainable_unit_economics: marketplace + insurance keep margin healthy"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for working parents + sitters; both sides win.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Stripe Connect + Checkr",
+      "agents": ["hermes:verification_runner", "openclaw:matching_dag", "hermes:safety_monitor"],
+      "data": "Per-family preferences, sitter history, safety corpus.",
+      "infra": "AWS + Snowflake; per-state worker compliance.",
+      "hitl": "Trust + safety reviews incidents; ops verifies sitters."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Parent books with one tap; agent handles verification + monitoring."
+  },
+  {
+    "id": "family_chore_economy_for_kids",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A chore + allowance OS that teaches kids financial literacy by making earning real.",
+    "core_problem": "60M US households with kids 6-16; existing apps (Greenlight, GoHenry) are debit cards, not earning systems.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Chore-verification agent (photo + parent approval); financial coaching agent teaches saving + investing.",
+    "business_model": "subscription",
+    "monetization_logic": "$10-20/mo per family + interchange on debit card.",
+    "distribution_strategy": "Parent community + school partnerships.",
+    "retention_loop": "Per-kid balance + history compounds; switching loses earned trust.",
+    "moat_potential": { "class": "switching_cost", "rationale": "Kid financial history is account-locked; family preference moves slow." },
+    "scalability_score": 7,
+    "scalability_rationale": "B2C scale; banking partner gates.",
+    "billion_dollar_path": "Stage 1: D2C families. Stage 2: school partnership + financial literacy curriculum. Stage 3: full youth-financial-OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: COPPA + state minor banking + UTMA",
+      "fake_ai_trap: parent approves every chore + payout"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible parent-trust brand + interchange + subscription combo.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Node + Postgres + Galileo + Plaid",
+      "agents": ["hermes:chore_verifier", "openclaw:payout_dag", "hermes:literacy_coach"],
+      "data": "Per-kid chore corpus, financial behavior, parent rules.",
+      "infra": "AWS + RDS; PCI + COPPA + state minor banking compliance.",
+      "hitl": "Parent approves every chore + payout; bank partner reviews any large transaction."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Kid uploads chore photo; parent approves; agent pays."
+  },
+  {
+    "id": "family_kid_screen_time_brain",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A screen-time brain that swaps Roblox for the right educational app — without the kid noticing.",
+    "core_problem": "70M US kids spend 4-7 hrs/day on screens; existing parental controls (Apple, Google Family Link) are blocking, not steering.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Usage-pattern agent classifies content; substitution agent suggests next app + game; reward agent rewards learning.",
+    "business_model": "subscription",
+    "monetization_logic": "$10-15/mo per family + content-publisher partnership revenue.",
+    "distribution_strategy": "Parent community + school partnerships.",
+    "retention_loop": "Per-kid usage corpus + parent rules lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-kid behavior + outcome corpus is unique." },
+    "scalability_score": 7,
+    "scalability_rationale": "Mobile + community scale fast; partnership channel.",
+    "billion_dollar_path": "Stage 1: D2C families. Stage 2: school + EdTech bundle. Stage 3: full youth-content-OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: COPPA + state youth digital protection",
+      "thin_wrapper_syndrome: own substitution algorithm"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-kid behavior corpus is asymmetric; OS-level controls see only screen time.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + Apple ScreenTime API",
+      "agents": ["hermes:content_classifier", "openclaw:substitution_dag", "hermes:reward_engine"],
+      "data": "Per-kid usage patterns, content metadata, learning outcomes.",
+      "infra": "AWS + Snowflake; COPPA-aligned.",
+      "hitl": "Parent approves every new app whitelist; ed advisor reviews content."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Kid opens iPad; agent suggests the next thing; parent sees weekly digest."
+  },
+  {
+    "id": "family_pediatric_appointment_navigator",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A pediatric navigator that books well-visits + specialists + insurance auths in one shot.",
+    "core_problem": "55M US kids face fragmented pediatric care; parents lose 10+ hrs/yr to insurance + scheduling friction.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Records-aggregation agent ingests EHR; scheduling agent books across providers; insurance agent submits prior auths.",
+    "business_model": "subscription",
+    "monetization_logic": "$15/mo + insurance partnership revenue.",
+    "distribution_strategy": "Pediatric clinic + insurance partnerships.",
+    "retention_loop": "Per-child + per-family records compound; insurance + provider lock.",
+    "moat_potential": { "class": "embedded_workflow", "rationale": "Per-clinic + per-insurance integration deep." },
+    "scalability_score": 7,
+    "scalability_rationale": "Healthcare cycle slow; once integrated, expansion fast.",
+    "billion_dollar_path": "Stage 1: D2C families. Stage 2: pediatric care + insurance bundle. Stage 3: full pediatric care navigation OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: HIPAA + state pediatric care + COPPA",
+      "fake_ai_trap: clinical reviewer for any insurance dispute"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for families + pediatric care + insurance.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + EHR API + Availity",
+      "agents": ["hermes:records_aggregator", "openclaw:scheduling_dag", "hermes:auth_router"],
+      "data": "Per-child records, provider schedules, insurance plans.",
+      "infra": "AWS + Snowflake; HIPAA + COPPA.",
+      "hitl": "Clinical reviewer for any prior auth dispute; parent approves data sharing."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Parent says 'time for well-visits + flu shots'; agent books all three providers."
+  },
+  {
+    "id": "family_household_inventory_buy_smarter",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A household inventory that auto-orders the toilet paper before you ask 'who used the last roll'.",
+    "core_problem": "60M US families run out of basics weekly; existing solutions (Amazon Subscribe & Save) are fixed-cadence not consumption-aware.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Voice + receipt + camera agent tracks inventory; reorder agent times Amazon/Instacart based on consumption.",
+    "business_model": "subscription",
+    "monetization_logic": "$5/mo + affiliate revenue.",
+    "distribution_strategy": "Smart-home community + retailer partnerships.",
+    "retention_loop": "Per-household consumption corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-household consumption velocity is unique." },
+    "scalability_score": 6,
+    "scalability_rationale": "Mid-tail; affiliate + subscription scale.",
+    "billion_dollar_path": "Stage 1: basics + cleaning. Stage 2: full household-supply autopilot. Stage 3: bundled with grocery + delivery.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own consumption corpus",
+      "unsustainable_unit_economics: subscription + affiliate"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-household consumption data is asymmetric; retailers see baskets, we see velocity.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + Amazon Affiliate + Instacart API",
+      "agents": ["hermes:inventory_capturer", "openclaw:reorder_dag", "hermes:supplier_router"],
+      "data": "Per-household inventory + consumption velocity.",
+      "infra": "AWS + RDS; SOC 2.",
+      "hitl": "User approves reorder >$50; ops handles disputes."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Family says 'we used the last paper towels'; agent reorders + updates list."
+  },
+  {
+    "id": "family_grandparent_connection_coach",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "A grandparent connection coach that bridges the digital divide so the kids actually call.",
+    "core_problem": "60M US grandparents underconnect with grandkids; tech friction + scheduling kills calls; existing FaceTime is utility, not relationship.",
+    "emotional_driver": "belonging",
+    "ai_leverage": "Activity agent suggests games + topics by kid age; connection agent schedules + facilitates calls.",
+    "business_model": "subscription",
+    "monetization_logic": "$9/mo per family.",
+    "distribution_strategy": "Senior community + Medicare Advantage + family channel.",
+    "retention_loop": "Per-family connection history + activity corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-family + per-kid age engagement corpus is unique." },
+    "scalability_score": 6,
+    "scalability_rationale": "Mid-tail; community channel.",
+    "billion_dollar_path": "Stage 1: D2C families. Stage 2: bundled with elder + family insurance. Stage 3: full intergenerational connection OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: COPPA + senior accessibility",
+      "thin_wrapper_syndrome: own engagement model"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-family + per-kid engagement data is asymmetric.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + WebRTC",
+      "agents": ["hermes:activity_planner", "openclaw:connection_dag", "hermes:family_messenger"],
+      "data": "Per-family connection history, activity outcomes.",
+      "infra": "AWS + RDS; COPPA-aligned.",
+      "hitl": "Parent approves any third-party engagement."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Grandparent presses one button; agent prompts a kid-appropriate game; call begins."
+  },
+  {
+    "id": "family_legal_docs_for_minors",
+    "vertical": "family",
+    "version": "1.0.0",
+    "hook": "An everyday legal-docs vault that handles permission slips, sports waivers, and 504 plans without the chaos.",
+    "core_problem": "55M US K-12 families sign 50+ docs/yr; signatures lost; deadlines missed; no central record.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Document-classification agent ingests school + activity docs; signing agent routes for parent e-signature; storage agent retains records.",
+    "business_model": "subscription",
+    "monetization_logic": "$5-9/mo per family + school district enterprise tier.",
+    "distribution_strategy": "School district + activity-organizer partnerships.",
+    "retention_loop": "Per-family document vault lock.",
+    "moat_potential": { "class": "embedded_workflow", "rationale": "Per-district + per-activity integrations are sticky." },
+    "scalability_score": 6,
+    "scalability_rationale": "Per-district sales; software margins after.",
+    "billion_dollar_path": "Stage 1: K-12. Stage 2: full family-document OS. Stage 3: bundled with insurance + estate.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: FERPA + COPPA + state minor consent",
+      "thin_wrapper_syndrome: own document classification + routing"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for K-12 families + districts; both win.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + DocuSign",
+      "agents": ["hermes:doc_classifier", "openclaw:signing_dag", "hermes:storage_router"],
+      "data": "Per-family documents, school metadata.",
+      "infra": "AWS + KMS; FERPA + COPPA.",
+      "hitl": "Parent signs every legally binding document; school approves data integration."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Parent sees one signing reminder per day; documents auto-filed."
+  }
+]

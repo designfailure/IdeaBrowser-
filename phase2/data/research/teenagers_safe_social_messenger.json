@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "teenagers_safe_social_messenger",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 40,
+  "signal_band": "warm",
+  "summary": "Seeded envelope. A teen messenger that catches predator + cyberbully patterns before parents have to. Live web research has not run yet; invoke 'npm run research -- --id teenagers_safe_social_messenger' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "builder_ai",
+      "rationale": "Risk profile overlaps Builder.ai (Business model fraud — human labor disguised as AI; lack of financial governance)."
+    },
+    {
+      "failure_id": "lilium",
+      "rationale": "Risk profile overlaps Lilium (Hardware scaling chasm; regulatory delays; capital intensity exceeded projections)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-teenagers_safe_social_messenger-3682251550",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 40,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

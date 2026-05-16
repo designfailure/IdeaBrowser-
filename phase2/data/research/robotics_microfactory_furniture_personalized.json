@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "robotics_microfactory_furniture_personalized",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 67,
+  "signal_band": "warm",
+  "summary": "Seeded envelope. A microfactory robot that builds personalized furniture in 4 hours, shipping next-day from a 5,000sqft cell. Live web research has not run yet; invoke 'npm run research -- --id robotics_microfactory_furniture_personalized' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "lilium",
+      "rationale": "Risk profile overlaps Lilium (Hardware scaling chasm; regulatory delays; capital intensity exceeded projections)."
+    },
+    {
+      "failure_id": "northvolt",
+      "rationale": "Risk profile overlaps Northvolt (Manufacturing execution failure; scaling complexity underestimated)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-robotics_microfactory_furniture_personalized-18821752",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 67,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

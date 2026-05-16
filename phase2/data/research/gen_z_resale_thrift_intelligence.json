@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "gen_z_resale_thrift_intelligence",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 79,
+  "signal_band": "hot",
+  "summary": "Seeded envelope. A thrift-resale intelligence layer that tells Gen-Z what to flip and where for maximum profit. Live web research has not run yet; invoke 'npm run research -- --id gen_z_resale_thrift_intelligence' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "lilium",
+      "rationale": "Risk profile overlaps Lilium (Hardware scaling chasm; regulatory delays; capital intensity exceeded projections)."
+    },
+    {
+      "failure_id": "vroom",
+      "rationale": "Risk profile overlaps Vroom (High operational costs; inventory management failure; macroeconomic headwinds)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-gen_z_resale_thrift_intelligence-390252274",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 79,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

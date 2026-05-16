@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "home_appliances_install_concierge",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 66,
+  "signal_band": "warm",
+  "summary": "Seeded envelope. An install concierge that turns 'they didn't bring the right vent' into a fixed dishwasher in one trip. Live web research has not run yet; invoke 'npm run research -- --id home_appliances_install_concierge' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "adept_ai",
+      "rationale": "Risk profile overlaps Adept AI (Commoditization by foundational models; no proprietary data moat; capital intensity)."
+    },
+    {
+      "failure_id": "jasper_ai",
+      "rationale": "Risk profile overlaps Jasper AI (Rapid commoditization by GPT-4/Claude; no retention loop; no workflow moat)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-home_appliances_install_concierge-2010448366",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 66,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

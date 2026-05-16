@@ -1,0 +1,86 @@
+{
+  "$schema_version": "1.0.0",
+  "dags": [
+    {
+      "id": "rank-by-moat",
+      "description": "Score and rank blueprints (or a vertical subset) by moat strength + signal score.",
+      "inputs": ["vertical?", "limit?"],
+      "outputs": ["ranked: Blueprint[]"],
+      "nodes": [
+        { "name": "load_corpus", "module": "hermes:load_corpus" },
+        { "name": "filter_subset", "module": "hermes:filter" },
+        { "name": "moat_scorer", "module": "hermes:moat_scorer" },
+        { "name": "compose_ranking", "module": "hermes:compose_ranking" }
+      ],
+      "hitl": []
+    },
+    {
+      "id": "synthesize-PRD",
+      "description": "Generate a PRD.md from a blueprint + its research envelope.",
+      "inputs": ["blueprint_id"],
+      "outputs": ["prd_md: string"],
+      "nodes": [
+        { "name": "load_blueprint", "module": "hermes:load_blueprint" },
+        { "name": "load_research", "module": "hermes:load_research" },
+        { "name": "render_prd", "module": "hermes:render_prd" },
+        { "name": "hitl_review", "module": "hermes:hitl_gate" }
+      ],
+      "hitl": ["hitl_review"]
+    },
+    {
+      "id": "expand-billion-dollar-path",
+      "description": "Stress-test the 3-stage billion-dollar path; surface adjacencies + capital requirements.",
+      "inputs": ["blueprint_id"],
+      "outputs": ["expansion: ExpansionPlan"],
+      "nodes": [
+        { "name": "load_blueprint", "module": "hermes:load_blueprint" },
+        { "name": "adjacency_finder", "module": "hermes:adjacency_finder" },
+        { "name": "capital_modeler", "module": "hermes:capital_modeler" },
+        { "name": "compose_plan", "module": "hermes:compose_plan" }
+      ],
+      "hitl": []
+    },
+    {
+      "id": "stress-test-failure",
+      "description": "Run each blueprint against the 8 failure archetypes; emit a defense plan.",
+      "inputs": ["blueprint_id"],
+      "outputs": ["defense_plan: DefensePlan"],
+      "nodes": [
+        { "name": "load_blueprint", "module": "hermes:load_blueprint" },
+        { "name": "load_archetypes", "module": "hermes:load_archetypes" },
+        { "name": "match_archetypes", "module": "hermes:archetype_matcher" },
+        { "name": "compose_defense", "module": "hermes:compose_defense" }
+      ],
+      "hitl": []
+    },
+    {
+      "id": "research-enrich",
+      "description": "Phase 2.5 enrichment DAG. Wired to the Corsair Research Engine orchestrator.",
+      "inputs": ["blueprint_id | vertical | --all"],
+      "outputs": ["envelope: ResearchEnvelope"],
+      "nodes": [
+        { "name": "query_expansion", "module": "hermes:query_expansion" },
+        { "name": "multi_source_search", "module": "hermes:multi_source_search" },
+        { "name": "browser_crawl", "module": "hermes:browser_crawl" },
+        { "name": "extract", "module": "hermes:extract" },
+        { "name": "dedupe", "module": "hermes:dedupe" },
+        { "name": "score", "module": "hermes:score" },
+        { "name": "validate", "module": "hermes:validate" },
+        { "name": "persist", "module": "hermes:persist" }
+      ],
+      "hitl": ["persist:if_signal_delta_gt_25"],
+      "budget": { "search": 20, "fetch": 30, "browser": 5, "apify": 5, "wallTimeMs": 300000 }
+    },
+    {
+      "id": "deep-research",
+      "description": "Free-form deep research from /research surface; same DAG as research-enrich but with synthetic blueprint as input.",
+      "inputs": ["query: string", "scope?: vertical[]"],
+      "outputs": ["envelope: ResearchEnvelope"],
+      "nodes": [
+        { "name": "synthesize_target", "module": "hermes:synthesize_target" },
+        { "name": "research_enrich", "module": "openclaw:research-enrich" }
+      ],
+      "hitl": ["save_to_blueprint:explicit"]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "blueprint_id": "finance_neobank_for_truckers",
+  "last_crawled_at": "2026-05-16T11:51:39.289Z",
+  "signal_score": 0,
+  "signal_band": "cold",
+  "summary": "No live citations yet — invoke 'npm run research -- --id finance_neobank_for_truckers' with tools wired to populate.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "",
+    "citation_ids": []
+  },
+  "agent_trace": {
+    "openclaw_run_id": "run-finance_neobank_for_truckers-mp8acyzd-e49c8b",
+    "started_at": "2026-05-16T11:51:39.289Z",
+    "ended_at": "2026-05-16T11:51:39.294Z",
+    "truncated": true,
+    "nodes": [
+      {
+        "name": "query_expansion",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "9 queries generated"
+      },
+      {
+        "name": "multi_source_search",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "0 raw results"
+      },
+      {
+        "name": "browser_crawl",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "0 browser-fetched"
+      },
+      {
+        "name": "extract",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "extracted 0 citations, 0 competitors, 0 papers"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "0 -> 0 after dedupe"
+      },
+      {
+        "name": "score",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "signal=0 (cold)"
+      },
+      {
+        "name": "validate",
+        "status": "error",
+        "duration_ms": 2,
+        "notes": "Cannot find package 'ajv' imported from C:\\fAleš\\Cursor\\Idea_Browser\\agents\\research\\nodes\\validate.mjs"
+      }
+    ],
+    "errors": [
+      "validate: Cannot find package 'ajv' imported from C:\\fAleš\\Cursor\\Idea_Browser\\agents\\research\\nodes\\validate.mjs"
+    ]
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 44,
+      "delta": "initial seed"
+    },
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 44,
+      "delta": "44 -> 0"
+    },
+    {
+      "crawled_at": "2026-05-16T11:41:37.110Z",
+      "signal_score": 0,
+      "delta": "0 -> 0"
+    },
+    {
+      "crawled_at": "2026-05-16T11:41:51.338Z",
+      "signal_score": 0,
+      "delta": "0 -> 0"
+    }
+  ],
+  "version": "1.0.0"
+}

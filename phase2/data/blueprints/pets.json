@@ -1,0 +1,322 @@
+[
+  {
+    "id": "pets_telehealth_for_dogs_cats",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "A 24/7 pet telehealth that triages 'is this an ER visit' in 90 seconds.",
+    "core_problem": "180M US pets generate 30M ER visits/yr; 50% are non-emergencies; existing telehealth (Pawp, Airvet) lacks ML triage.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Vision + symptom agent triages photo/video + history; vet agent connects to live consult only when warranted.",
+    "business_model": "subscription",
+    "monetization_logic": "$25/mo unlimited triage + $40-90 per live vet visit.",
+    "distribution_strategy": "Pet-insurance + pet-store partnerships.",
+    "retention_loop": "Per-pet history + vet-consult corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-breed symptom-outcome corpus improves triage." },
+    "scalability_score": 8,
+    "scalability_rationale": "Vet-license footprint + telehealth rules per state gate; software margins after.",
+    "billion_dollar_path": "Stage 1: D2C triage. Stage 2: full vet-bundle (insurance + Rx). Stage 3: care navigation + outcomes platform.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state vet practice + telehealth rules",
+      "fake_ai_trap: licensed vet reviews any prescriptive flag"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-pet + per-breed corpus is asymmetric; clinics see one visit at a time.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + WebRTC",
+      "agents": ["hermes:symptom_classifier", "openclaw:triage_dag", "hermes:vet_router"],
+      "data": "Per-pet history, breed symptom corpus, vet outcomes.",
+      "infra": "AWS + Snowflake; per-state vet compliance.",
+      "hitl": "Licensed vet reviews any 'urgent ER' flag before owner notification."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Owner snaps photo + describes symptom; agent triages; vet calls if needed."
+  },
+  {
+    "id": "pets_dog_walker_marketplace_ai",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "A dog-walker marketplace that prices each walk by your dog's actual exercise needs.",
+    "core_problem": "Rover/Wag price by 30/60-min slots; the dog needs more or less; trust + safety incidents persist.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Activity-needs agent baselines per dog; matching agent picks walker + price; safety agent monitors GPS + behavior during walk.",
+    "business_model": "marketplace",
+    "monetization_logic": "20% take rate; safety insurance bundled.",
+    "distribution_strategy": "Vet + pet-store partnerships + community channels.",
+    "retention_loop": "Per-dog + per-walker trust + history compounds.",
+    "moat_potential": { "class": "network", "rationale": "Two-sided trust + safety network compounds." },
+    "scalability_score": 7,
+    "scalability_rationale": "Per-metro cold-start; software margins after.",
+    "billion_dollar_path": "Stage 1: dog walks. Stage 2: full pet-care marketplace (boarding, grooming). Stage 3: pet-care OS bundled with insurance.",
+    "failure_avoidance": [
+      "unsustainable_unit_economics: per-walk pricing + insurance keep margin healthy",
+      "regulatory_blind_spot: gig-worker classification per state (CA AB5)"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for dog-walker + owner; both win.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Stripe Connect + Twilio",
+      "agents": ["hermes:activity_baseliner", "openclaw:matching_dag", "hermes:safety_monitor"],
+      "data": "Per-dog activity needs, walker history, GPS + behavior corpus.",
+      "infra": "AWS + RDS; per-state worker classification compliance.",
+      "hitl": "Trust + safety reviews incidents; ops verifies new walkers."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Owner books one-click walk; agent picks walker + adjusts price."
+  },
+  {
+    "id": "pets_personalized_food_subscription",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "Personalized pet food that adapts every two weeks based on your dog's stool, energy, and weight.",
+    "core_problem": "$50B/yr pet food market; existing brands (Farmer's Dog, Ollie) deliver same recipe forever; veterinary nutrition is dynamic.",
+    "emotional_driver": "belonging",
+    "ai_leverage": "Outcome agent ingests owner-reported metrics + photos; nutrition agent adjusts recipe; vet agent reviews changes.",
+    "business_model": "subscription",
+    "monetization_logic": "$40-160/mo by dog size; food + nutrition bundled.",
+    "distribution_strategy": "D2C + vet partnerships.",
+    "retention_loop": "Per-dog formula + outcome corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-dog outcome corpus improves recipes; competitors batch by breed only." },
+    "scalability_score": 7,
+    "scalability_rationale": "Manufacturing + supply chain capital; software margins on top.",
+    "billion_dollar_path": "Stage 1: dogs. Stage 2: cats + exotics. Stage 3: full pet-life-cycle bundle (food + meds + insurance).",
+    "failure_avoidance": [
+      "hardware_scaling_chasm: outsource manufacturing; own the algorithm",
+      "regulatory_blind_spot: AAFCO + FDA pet food labeling"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-dog outcome corpus is asymmetric; existing brands fly blind.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Stripe + manufacturing partner API",
+      "agents": ["hermes:outcome_aggregator", "openclaw:recipe_dag", "hermes:vet_reviewer"],
+      "data": "Per-dog outcome reports, recipe corpus, vet reviews.",
+      "infra": "AWS + RDS; AAFCO compliance.",
+      "hitl": "Veterinary nutritionist signs every recipe change."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Owner submits weekly photo + notes; agent adjusts; new bag arrives."
+  },
+  {
+    "id": "pets_lost_pet_recovery_network",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "A lost-pet recovery network that uses neighborhood Ring + community vision to find your dog in hours.",
+    "core_problem": "10M US pets go missing/yr; recovery rates <30%; existing solutions (Petco Love Lost) are listing-only.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Vision agent matches photos to community + Ring camera footage (opt-in); routing agent crowd-sources searches.",
+    "business_model": "subscription",
+    "monetization_logic": "$5/mo + $19 'urgent search' boost.",
+    "distribution_strategy": "Ring + Nextdoor + vet partnerships; community channels.",
+    "retention_loop": "Per-neighborhood search corpus + community trust lock.",
+    "moat_potential": { "class": "network", "rationale": "Community + camera network density compounds; cold-start barrier." },
+    "scalability_score": 7,
+    "scalability_rationale": "Per-metro cold-start; software margins after.",
+    "billion_dollar_path": "Stage 1: lost pets. Stage 2: full neighborhood-safety + lost-and-found platform. Stage 3: insurance bundle.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: privacy + opt-in for camera footage",
+      "thin_wrapper_syndrome: own vision matching engine"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for community + pet owners; everyone wins.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + custom vision",
+      "agents": ["hermes:photo_matcher", "openclaw:search_dag", "hermes:community_router"],
+      "data": "Per-neighborhood pet photos, search outcomes, opt-in camera feeds.",
+      "infra": "AWS + S3; per-state privacy compliance.",
+      "hitl": "Trust + safety reviews disputes; community mods escalate."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Owner says 'lost dog' + photo; agent activates network."
+  },
+  {
+    "id": "pets_aging_companion_intervention",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "An aging-pet companion that catches arthritis + dementia signals 6 months before the vet does.",
+    "core_problem": "60M US senior pets face quality-of-life decline; signs are subtle; vets see them only quarterly.",
+    "emotional_driver": "belonging",
+    "ai_leverage": "Camera + wearable agent classifies gait + behavior; intervention agent suggests vet visit + at-home modifications.",
+    "business_model": "subscription",
+    "monetization_logic": "$15/mo + insurance partnership.",
+    "distribution_strategy": "Vet + pet-insurance bundle.",
+    "retention_loop": "Per-pet aging trajectory + intervention corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-breed aging corpus improves intervention timing." },
+    "scalability_score": 7,
+    "scalability_rationale": "Hardware install gates; software margins after.",
+    "billion_dollar_path": "Stage 1: senior dogs. Stage 2: cats + exotics. Stage 3: full pet-aging-care platform.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own per-breed aging corpus",
+      "fake_ai_trap: vet reviews any escalation"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-breed aging data is asymmetric; vets see snapshots, we see continuous.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + Fitbark + custom CV",
+      "agents": ["hermes:gait_classifier", "openclaw:intervention_dag", "hermes:vet_router"],
+      "data": "Per-pet aging telemetry, vet outcomes, intervention success.",
+      "infra": "AWS + Snowflake; per-state vet compliance.",
+      "hitl": "Vet reviews any prescriptive change; owner approves any intervention."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Owner sees a monthly digest; vet visit suggested only when warranted."
+  },
+  {
+    "id": "pets_grooming_at_home_brain",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "An at-home grooming brain that tells you the right brush + frequency for your dog's coat by photo.",
+    "core_problem": "120M dog coats neglected; mobile groomers expensive + booked; owners don't know breed-specific care.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Vision agent classifies coat type + condition; recommendation agent prescribes tools + technique + schedule.",
+    "business_model": "subscription",
+    "monetization_logic": "$5/mo + tool affiliate revenue.",
+    "distribution_strategy": "Pet retail + community channels.",
+    "retention_loop": "Per-dog coat corpus + tool history lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-breed + per-dog coat corpus improves recommendations." },
+    "scalability_score": 6,
+    "scalability_rationale": "Mid-tail; affiliate + subscription scale.",
+    "billion_dollar_path": "Stage 1: at-home grooming. Stage 2: full pet-care education + retail. Stage 3: pet-care OS.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own breed coat corpus",
+      "unsustainable_unit_economics: subscription + affiliate"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-breed coat data is asymmetric; YouTube tutorials are generic.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + custom CV",
+      "agents": ["hermes:coat_classifier", "openclaw:recommendation_dag", "hermes:tool_router"],
+      "data": "Per-breed coat types, owner outcomes.",
+      "infra": "AWS + S3; SOC 2.",
+      "hitl": "Pro groomer reviews any breed-specific protocol."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Owner snaps a photo; agent prescribes brush + schedule."
+  },
+  {
+    "id": "pets_pet_cremation_concierge",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "An end-of-life concierge that handles pet cremation + grief support while the owner is in shock.",
+    "core_problem": "8M US pets pass annually; owners face logistics + grief simultaneously; existing services (Lap of Love) are mid-vet only.",
+    "emotional_driver": "belonging",
+    "ai_leverage": "Logistics agent books cremation + memorial; grief agent provides 24/7 support resources.",
+    "business_model": "transaction_fee",
+    "monetization_logic": "$199-499 per case + grief support bundle; insurance reimbursement TBD.",
+    "distribution_strategy": "Vet + pet-insurance partnerships.",
+    "retention_loop": "Per-vet partnership + family relationships drive future pet adoption referrals.",
+    "moat_potential": { "class": "embedded_workflow", "rationale": "Vet + insurer integration creates switching cost; emotional moment locks loyalty." },
+    "scalability_score": 6,
+    "scalability_rationale": "Vet partnership channel; mid-tail.",
+    "billion_dollar_path": "Stage 1: cremation + memorial. Stage 2: full pet-loss bundle (insurance + grief therapy). Stage 3: full pet-life-cycle platform.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state pet cremation rules + ash disposal",
+      "unsustainable_unit_economics: per-case + bundle keeps margin healthy"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for vet + family; we elevate the ecosystem.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Postgres + Stripe + Calendly",
+      "agents": ["hermes:logistics_router", "openclaw:case_dag", "hermes:grief_support"],
+      "data": "Per-vet partner, cremation provider network, family preferences.",
+      "infra": "AWS + RDS; HIPAA-aligned for grief therapy.",
+      "hitl": "Vet partner approves cases; grief specialist on-call for any escalation."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Family submits case via vet; agent handles all logistics gently."
+  },
+  {
+    "id": "pets_breeder_health_records",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "A breeder health-records platform that ends the puppy-mill problem with verifiable lineage + DNA.",
+    "core_problem": "$2B/yr US dog breeding suffers fraud + health issues; AKC records are paper-era; buyers can't verify health.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Vision + records agent verifies parentage + health screens; trust agent maintains breeder reputation graph.",
+    "business_model": "subscription",
+    "monetization_logic": "$99/mo per breeder + $49 buyer verification.",
+    "distribution_strategy": "AKC + breed club partnerships + buyer-side D2C.",
+    "retention_loop": "Per-breeder + per-pup history compounds; switching forfeits trust.",
+    "moat_potential": { "class": "regulatory", "rationale": "AKC + state breeder registration integration." },
+    "scalability_score": 6,
+    "scalability_rationale": "Mid-tail; community channel.",
+    "billion_dollar_path": "Stage 1: dog breeders. Stage 2: cat + exotic. Stage 3: full pet provenance + insurance platform.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state breeder licensing + USDA APHIS",
+      "fake_ai_trap: licensed vet signs every health verification"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible regulatory + trust moat; reject mill-volume metrics.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Embark/Wisdom Panel API",
+      "agents": ["hermes:lineage_verifier", "openclaw:health_records_dag", "hermes:buyer_router"],
+      "data": "Per-breeder + per-pup health + DNA records.",
+      "infra": "AWS + Snowflake; per-state breeder compliance.",
+      "hitl": "Vet signs health verifications; ops investigates trust flags."
+    },
+    "ui_ux_operating_model": "dashboard_plus_chat",
+    "ui_ux_invocation": "Breeder logs litter; buyer scans QR for full health history."
+  },
+  {
+    "id": "pets_smart_litter_tracker",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "A smart litter box that flags UTI + kidney disease in cats 30 days before symptoms.",
+    "core_problem": "75M US cats face UTI + CKD; existing trackers (Whisker Litter Robot) lack ML diagnostics.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Sensor + vision agent classifies frequency + volume + urine markers; vet agent flags risk + books visit.",
+    "business_model": "hardware_plus_software",
+    "monetization_logic": "$249 device + $9/mo monitoring + insurance bundle.",
+    "distribution_strategy": "Vet + pet-insurance + retail partnerships.",
+    "retention_loop": "Per-cat baseline + insurance bundle lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-cat health corpus improves diagnostics." },
+    "scalability_score": 6,
+    "scalability_rationale": "Hardware install gates; B2C scale.",
+    "billion_dollar_path": "Stage 1: cats. Stage 2: full multi-pet households. Stage 3: pet-health monitoring OS.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own per-cat health model",
+      "fake_ai_trap: vet reviews any prescriptive flag"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-cat continuous data is asymmetric; vets see snapshots.",
+    "technical_mvp_sketch": {
+      "stack": "Embedded + React Native + Python + Postgres + AWS IoT",
+      "agents": ["hermes:litter_classifier", "openclaw:diagnostic_dag", "hermes:vet_router"],
+      "data": "Per-cat litter telemetry, UTI/CKD outcomes.",
+      "infra": "AWS + Snowflake; per-state vet compliance.",
+      "hitl": "Vet reviews any escalated diagnostic."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Owner sees monthly health digest; urgent SMS only when warranted."
+  },
+  {
+    "id": "pets_training_voice_coach",
+    "vertical": "pets",
+    "version": "1.0.0",
+    "hook": "A voice-first dog-training coach that fixes leash-pulling in 14 days without a trainer.",
+    "core_problem": "70M US dog owners struggle with basic obedience; trainers cost $80-200/session; YouTube + apps lack feedback.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Vision + voice agent classifies dog behavior; coaching agent adapts protocol per dog response.",
+    "business_model": "subscription",
+    "monetization_logic": "$15/mo + premium trainer escalation $99/visit.",
+    "distribution_strategy": "Vet + pet-store + community channels.",
+    "retention_loop": "Per-dog progress + trainer corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-dog response corpus improves coaching." },
+    "scalability_score": 7,
+    "scalability_rationale": "Voice + vision API; community channel scales fast.",
+    "billion_dollar_path": "Stage 1: basic obedience. Stage 2: behavioral therapy. Stage 3: full pet-care education OS.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own per-dog response corpus",
+      "fake_ai_trap: certified trainer reviews any aggression flag"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-dog response data is asymmetric; YouTube is generic.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + ElevenLabs + custom CV",
+      "agents": ["hermes:behavior_classifier", "openclaw:coaching_dag", "hermes:trainer_router"],
+      "data": "Per-dog session corpus, response outcomes.",
+      "infra": "AWS + RDS; SOC 2.",
+      "hitl": "Certified trainer reviews any 'high concern' behavior."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Owner records 60s session; agent voice-coaches next steps."
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "millennials_burnout_recovery_program",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A burnout-recovery program that fits between standups and is reimbursed by your employer.",
+    "core_problem": "60% of millennials report burnout; therapy is months out + EAP underused; existing apps (Headspace) are surface-level.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Coaching agent + clinician triage; intervention agent prescribes recovery protocols + nudges micro-breaks.",
+    "business_model": "subscription",
+    "monetization_logic": "$15/mo D2C + $9/mo per employee corporate.",
+    "distribution_strategy": "Corporate wellness + clinician + creator channels.",
+    "retention_loop": "Per-user state corpus + clinician relationship lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-user burnout + recovery corpus is unique." },
+    "scalability_score": 8,
+    "scalability_rationale": "B2B wellness + D2C; clinical license footprint gates serious cases.",
+    "billion_dollar_path": "Stage 1: D2C + corporate wellness. Stage 2: clinical adjunct. Stage 3: full mental + occupational-health OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: HIPAA + state telehealth + employer EAP rules",
+      "fake_ai_trap: clinician reviews any clinical escalation"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible corporate + clinical brand; reject vanity DAU.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + WebRTC",
+      "agents": ["hermes:state_baseliner", "openclaw:intervention_dag", "hermes:clinician_router"],
+      "data": "Per-user state, intervention corpus, clinical outcomes.",
+      "infra": "AWS + Snowflake; HIPAA + per-state telehealth.",
+      "hitl": "Clinician reviews any 'high risk' escalation."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "User speaks to agent for 90s daily; intervention sequenced over weeks."
+  },
+  {
+    "id": "millennials_house_buying_concierge",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A house-buying concierge that runs the search + offer + financing while you keep working.",
+    "core_problem": "12M millennials buying first homes face 3-12 month process; existing platforms (Zillow, Redfin) are listings + marketplaces, not concierge.",
+    "emotional_driver": "autonomy",
+    "ai_leverage": "Search agent matches per buyer profile; analysis agent runs comps + projection; offer agent drafts + submits.",
+    "business_model": "transaction_fee",
+    "monetization_logic": "0.5-1% buyer-side fee (vs traditional 2-3%); financing kickback.",
+    "distribution_strategy": "Realtor + lender partnerships + community channels.",
+    "retention_loop": "Per-buyer profile + history compounds for refi + next purchase.",
+    "moat_potential": { "class": "data", "rationale": "Per-buyer outcome + comp corpus is unique." },
+    "scalability_score": 7,
+    "scalability_rationale": "Per-MSA cold-start; software margins after.",
+    "billion_dollar_path": "Stage 1: first-time buyers. Stage 2: full real-estate-as-a-service (buy + finance + insurance). Stage 3: licensed brokerage layer.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state real estate + RESPA + TILA",
+      "thin_wrapper_syndrome: own buyer + comp corpus"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-buyer + per-MSA data is asymmetric; agents work from MLS alone.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + MLS APIs + DocuSign",
+      "agents": ["hermes:search_agent", "openclaw:analysis_dag", "hermes:offer_drafter"],
+      "data": "Per-buyer preferences, comps, transaction history.",
+      "infra": "AWS + RDS; per-state RE compliance.",
+      "hitl": "Licensed agent signs offers; lender approves financing."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Buyer states criteria; agent finds + offers; concierge handles tour + close."
+  },
+  {
+    "id": "millennials_couple_finance_brain",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A couple-finance brain that ends 'who paid for what' fights with a single weekly summary.",
+    "core_problem": "20M millennial couples manage shared finances poorly; existing tools (Honeydue, Splitwise) are split-tracking only.",
+    "emotional_driver": "belonging",
+    "ai_leverage": "Aggregation agent ingests both partners' accounts; planning agent suggests joint goals; communication agent generates the weekly summary.",
+    "business_model": "subscription",
+    "monetization_logic": "$15/mo per couple + interchange + investment partnership.",
+    "distribution_strategy": "Couples community + financial-coach partnerships + employer benefits.",
+    "retention_loop": "Per-couple history + joint-goal corpus lock.",
+    "moat_potential": { "class": "switching_cost", "rationale": "Joint financial history + automation lock." },
+    "scalability_score": 8,
+    "scalability_rationale": "B2C scale + employer channel.",
+    "billion_dollar_path": "Stage 1: couples. Stage 2: full household-finance OS. Stage 3: bundled with insurance + investment.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own joint goal + planning engine",
+      "regulatory_blind_spot: ECOA + state community-property"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for couples + financial advisors.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Plaid + Galileo",
+      "agents": ["hermes:account_aggregator", "openclaw:planning_dag", "hermes:weekly_summarizer"],
+      "data": "Per-couple accounts, transactions, joint goals.",
+      "infra": "AWS + RDS; PCI + per-state finance compliance.",
+      "hitl": "Both partners approve any joint movement >$1k; advisor reviews any major plan."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Sunday-night summary; couple agrees + agent executes."
+  },
+  {
+    "id": "millennials_wedding_planning_brain",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A wedding-planning brain that slashes 200 hours of planning into 20 — without the cookie-cutter Pinterest aesthetic.",
+    "core_problem": "2M US weddings/yr; planning takes 200+ hrs; existing tools (The Knot, Zola) are listings + checklists.",
+    "emotional_driver": "status",
+    "ai_leverage": "Vendor-matching agent picks per couple style + budget; planning agent timelines + tracks; communication agent emails vendors.",
+    "business_model": "subscription",
+    "monetization_logic": "$199-499 one-time + vendor referral revenue.",
+    "distribution_strategy": "Wedding community + vendor partnerships.",
+    "retention_loop": "Per-couple plan + vendor relationships compound.",
+    "moat_potential": { "class": "network", "rationale": "Couple + vendor + venue network compounds per metro." },
+    "scalability_score": 6,
+    "scalability_rationale": "Per-metro cold-start; high ARPU offsets one-time nature.",
+    "billion_dollar_path": "Stage 1: weddings. Stage 2: full life-event planning OS (anniversaries, milestones). Stage 3: wedding + insurance + finance bundle.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own per-couple matching + vendor reputation",
+      "unsustainable_unit_economics: one-time + vendor revenue keep margin healthy"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for couples + vendors + venues.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Stripe + Calendly",
+      "agents": ["hermes:vendor_matcher", "openclaw:planning_dag", "hermes:vendor_messenger"],
+      "data": "Per-couple style + budget, vendor reputation, outcomes.",
+      "infra": "AWS + RDS; SOC 2.",
+      "hitl": "Couple approves any deposit >$1k; ops verifies new vendors."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Couple says 'we want X for $40k'; agent returns vendor short list + plan."
+  },
+  {
+    "id": "millennials_aging_parents_concierge",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A sandwich-generation concierge that handles your parents' Medicare + caregiver coordination from your phone.",
+    "core_problem": "30M millennials care for aging parents; healthcare + insurance + caregiver coordination is opaque + time-consuming.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Records + insurance agent ingests per-parent care; scheduling agent coordinates caregivers + appointments; communication agent updates siblings.",
+    "business_model": "subscription",
+    "monetization_logic": "$49-99/mo per family + insurance partnership.",
+    "distribution_strategy": "Pediatric + Medicare Advantage + employer benefits.",
+    "retention_loop": "Per-family + per-parent history compounds; multi-year lock.",
+    "moat_potential": { "class": "embedded_workflow", "rationale": "Per-family workflow + insurance integration deep." },
+    "scalability_score": 7,
+    "scalability_rationale": "B2B benefits channel + insurance partnerships scale.",
+    "billion_dollar_path": "Stage 1: D2C families. Stage 2: insurance + benefits bundle. Stage 3: full elder-care navigation OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: HIPAA + state elder-care + insurance",
+      "fake_ai_trap: clinical reviewer for any prescriptive change"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for sandwich generation + elders + insurers.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + EHR + Availity APIs",
+      "agents": ["hermes:records_aggregator", "openclaw:coordination_dag", "hermes:family_messenger"],
+      "data": "Per-family records, caregiver schedules, insurance plans.",
+      "infra": "AWS + Snowflake; HIPAA + per-state elder-care.",
+      "hitl": "Clinician + family approves any care change."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "User asks 'mom's appointment Friday'; agent confirms transport + sends siblings update."
+  },
+  {
+    "id": "millennials_career_pivot_advisor",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A career-pivot advisor that maps your transferable skills to the next $200k role.",
+    "core_problem": "40M millennials face career stagnation; existing tools (LinkedIn) are network only; coaches cost $200-500/hr.",
+    "emotional_driver": "autonomy",
+    "ai_leverage": "Skills-mapping agent identifies transferable skills; opportunity agent surfaces roles; coaching agent prepares interviews.",
+    "business_model": "subscription",
+    "monetization_logic": "$49/mo + premium 1:1 coaching.",
+    "distribution_strategy": "Creator + LinkedIn community + employer benefits.",
+    "retention_loop": "Per-user career history + outcome corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-user career + outcome corpus improves recommendations." },
+    "scalability_score": 7,
+    "scalability_rationale": "Software + community channel scales fast.",
+    "billion_dollar_path": "Stage 1: D2C. Stage 2: corporate L&D bundle. Stage 3: full talent-marketplace platform.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own career + outcome corpus",
+      "fake_ai_trap: human coach reviews major decisions"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-user career + outcome data is asymmetric; LinkedIn sees titles, we see trajectories.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + LinkedIn API",
+      "agents": ["hermes:skills_mapper", "openclaw:opportunity_dag", "hermes:interview_coach"],
+      "data": "Per-user career + outcome corpus.",
+      "infra": "AWS + RDS; SOC 2.",
+      "hitl": "Coach reviews career-change decisions; user approves any external outreach."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "User says 'next move'; agent outlines + prepares."
+  },
+  {
+    "id": "millennials_subscription_killer",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A subscription killer that finds + cancels the $4k/yr you forgot about — and disputes the chargebacks.",
+    "core_problem": "70% of millennials have unused subscriptions; existing tools (Truebill, Rocket Money) cancel but don't dispute.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Detection agent classifies subscriptions; cancellation agent runs site automation + voice; dispute agent files chargebacks.",
+    "business_model": "outcome_based",
+    "monetization_logic": "30% of canceled annual value; minimum $9.",
+    "distribution_strategy": "PLG via 'connect bank, see subscriptions' wedge + community channels.",
+    "retention_loop": "Per-user subscription corpus + dispute history lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-vendor cancel + dispute corpus improves win rates." },
+    "scalability_score": 7,
+    "scalability_rationale": "Voice + automation; community channel scales fast.",
+    "billion_dollar_path": "Stage 1: D2C subscription. Stage 2: full personal-spend optimization. Stage 3: financial advocacy platform.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state UDAP + FTC negative-option rules",
+      "thin_wrapper_syndrome: own per-vendor cancel automation"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible per-vendor automation + outcome alignment.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Plaid + Vapi.ai",
+      "agents": ["hermes:subscription_detector", "openclaw:cancellation_dag", "hermes:dispute_filer"],
+      "data": "Per-vendor cancel + dispute corpus, user subscription history.",
+      "infra": "AWS + RDS; PCI compliant.",
+      "hitl": "User approves any chargeback >$200."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "User connects bank; agent surfaces + cancels in background."
+  },
+  {
+    "id": "millennials_real_estate_investing_first",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A first-time real-estate investing copilot that turns 'house hack' rentals into a real portfolio.",
+    "core_problem": "5M millennials want passive real estate income; BiggerPockets is a forum; existing platforms (Roofstock) are listings.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Underwriting agent runs deal analysis; financing agent matches loans; property-management agent picks PM partners.",
+    "business_model": "subscription",
+    "monetization_logic": "$49/mo + transaction success fee.",
+    "distribution_strategy": "Real estate community + creator channels.",
+    "retention_loop": "Per-investor portfolio + outcome corpus lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-MSA + per-deal outcome corpus is unique." },
+    "scalability_score": 7,
+    "scalability_rationale": "Software + community + per-MSA scaling.",
+    "billion_dollar_path": "Stage 1: first-time investors. Stage 2: full real-estate-as-a-service. Stage 3: licensed RE investment advisory.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state RE + SEC accredited investor rules",
+      "fake_ai_trap: licensed RE pro reviews every deal"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible deal-discipline + per-MSA corpus.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + MLS + lender APIs",
+      "agents": ["hermes:deal_analyzer", "openclaw:underwriting_dag", "hermes:pm_router"],
+      "data": "Per-deal underwriting, MSA comps, outcomes.",
+      "infra": "AWS + RDS; per-state RE compliance.",
+      "hitl": "Licensed agent + lender approve every deal."
+    },
+    "ui_ux_operating_model": "dashboard_plus_chat",
+    "ui_ux_invocation": "Investor sees deal flow; chat to ask 'what would my cash-on-cash be'."
+  },
+  {
+    "id": "millennials_fertility_navigator",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A fertility navigator that maps clinic + insurance + financing for the millennial planning family later.",
+    "core_problem": "10M millennials face fertility decisions; clinics are opaque; insurance varies wildly; emotional toll is high.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Clinic-matching agent ranks per success rate + insurance + cost; financing agent optimizes payment; coaching agent supports emotional journey.",
+    "business_model": "subscription",
+    "monetization_logic": "$49-99/mo + clinic + insurance partnership revenue.",
+    "distribution_strategy": "OB + employer benefits + clinical partnerships.",
+    "retention_loop": "Per-couple journey + clinic relationship lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-clinic outcome + cost corpus is unique." },
+    "scalability_score": 7,
+    "scalability_rationale": "Clinical + insurance partnerships gate; software margins after.",
+    "billion_dollar_path": "Stage 1: D2C. Stage 2: employer + insurance bundle. Stage 3: full reproductive-health navigation OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: HIPAA + state ART + insurance + minor consent",
+      "fake_ai_trap: clinician reviews any clinical recommendation"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for couples + clinics + insurance.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + EHR + Availity",
+      "agents": ["hermes:clinic_matcher", "openclaw:financing_dag", "hermes:emotional_coach"],
+      "data": "Per-couple journey, clinic outcomes, insurance plans.",
+      "infra": "AWS + Snowflake; HIPAA + per-state ART.",
+      "hitl": "Clinician approves any prescriptive change; couple approves data sharing."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Couple inputs goals + insurance; agent ranks clinics + financing."
+  },
+  {
+    "id": "millennials_retirement_savings_optimizer",
+    "vertical": "millennials",
+    "version": "1.0.0",
+    "hook": "A retirement-savings optimizer that captures employer match + Roth + HSA the average millennial leaves behind.",
+    "core_problem": "20M millennials lose $2-5k/yr in unmatched 401k + tax-advantaged savings; existing tools (Personal Capital) display, don't act.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Optimization agent reads payroll + benefits; allocation agent shifts contributions across 401k + Roth + HSA; tax agent files year-end optimization.",
+    "business_model": "subscription",
+    "monetization_logic": "$10/mo + 0.25% AUM if managed.",
+    "distribution_strategy": "Employer benefits + financial-coach partnerships.",
+    "retention_loop": "Per-user contribution + tax history lock.",
+    "moat_potential": { "class": "embedded_workflow", "rationale": "Sits inside payroll + benefits; switching breaks workflow." },
+    "scalability_score": 8,
+    "scalability_rationale": "B2B benefits + D2C; high retention.",
+    "billion_dollar_path": "Stage 1: D2C. Stage 2: full employer-financial-wellness OS. Stage 3: licensed RIA layer.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: ERISA + IRS + state finance",
+      "thin_wrapper_syndrome: own optimization + tax engines"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible benefit-integration + retention; reject vanity AUM.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + ADP + Plaid + Schwab API",
+      "agents": ["hermes:benefits_reader", "openclaw:allocation_dag", "hermes:tax_optimizer"],
+      "data": "Per-user payroll, benefits, contribution history.",
+      "infra": "AWS + RDS; SOC 2 + ERISA-aligned.",
+      "hitl": "User approves contribution change; advisor signs any tax filing."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "User connects employer; agent optimizes silently; year-end tax doc generated."
+  }
+]

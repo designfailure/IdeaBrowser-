@@ -1,0 +1,42 @@
+{
+  "name": "corsair-idea-browser",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:corpus": "node scripts/build-corpus.mjs",
+    "build:research": "node scripts/seed-research.mjs",
+    "validate": "node scripts/validate.mjs",
+    "research": "node scripts/research-cli.mjs",
+    "predev": "npm run build:corpus && npm run build:research && npm run validate",
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build:corpus && npm run build:research && npm run validate && next build",
+    "start": "next start -p 3000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "fuse.js": "^7.0.0",
+    "lucide-react": "^0.451.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.4",
+    "class-variance-authority": "^0.7.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "@radix-ui/react-dialog": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.6.2",
+    "tailwindcss": "^3.4.13",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.5"
+  }
+}

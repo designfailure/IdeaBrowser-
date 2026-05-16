@@ -1,0 +1,74 @@
+{
+  "blueprint_id": "freeform_1778932299427",
+  "last_crawled_at": "2026-05-16T11:51:39.427Z",
+  "signal_score": 0,
+  "signal_band": "cold",
+  "summary": "No live citations yet — invoke 'npm run research -- --id freeform_1778932299427' with tools wired to populate.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "",
+    "citation_ids": []
+  },
+  "agent_trace": {
+    "openclaw_run_id": "run-freeform_1778932299427-mp8acz37-0b9ada",
+    "started_at": "2026-05-16T11:51:39.427Z",
+    "ended_at": "2026-05-16T11:51:39.429Z",
+    "truncated": true,
+    "nodes": [
+      {
+        "name": "query_expansion",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "9 queries generated"
+      },
+      {
+        "name": "multi_source_search",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "0 raw results"
+      },
+      {
+        "name": "browser_crawl",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "0 browser-fetched"
+      },
+      {
+        "name": "extract",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "extracted 0 citations, 0 competitors, 0 papers"
+      },
+      {
+        "name": "dedupe",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "0 -> 0 after dedupe"
+      },
+      {
+        "name": "score",
+        "status": "ok",
+        "duration_ms": 0,
+        "notes": "signal=0 (cold)"
+      },
+      {
+        "name": "validate",
+        "status": "error",
+        "duration_ms": 1,
+        "notes": "Cannot find package 'ajv' imported from C:\\fAleš\\Cursor\\Idea_Browser\\agents\\research\\nodes\\validate.mjs"
+      }
+    ],
+    "errors": [
+      "validate: Cannot find package 'ajv' imported from C:\\fAleš\\Cursor\\Idea_Browser\\agents\\research\\nodes\\validate.mjs"
+    ]
+  },
+  "confidence": 0.2,
+  "history": [],
+  "version": "1.0.0"
+}

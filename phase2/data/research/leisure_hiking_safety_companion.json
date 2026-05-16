@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "leisure_hiking_safety_companion",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 48,
+  "signal_band": "warm",
+  "summary": "Seeded envelope. Backcountry safety companion that knows when to call SAR before you do. Live web research has not run yet; invoke 'npm run research -- --id leisure_hiking_safety_companion' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "adept_ai",
+      "rationale": "Risk profile overlaps Adept AI (Commoditization by foundational models; no proprietary data moat; capital intensity)."
+    },
+    {
+      "failure_id": "jasper_ai",
+      "rationale": "Risk profile overlaps Jasper AI (Rapid commoditization by GPT-4/Claude; no retention loop; no workflow moat)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-leisure_hiking_safety_companion-4161448133",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 48,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

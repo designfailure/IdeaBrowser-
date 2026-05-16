@@ -1,0 +1,50 @@
+{
+  "blueprint_id": "wearables_smart_ring_for_seniors",
+  "last_crawled_at": "2026-05-16T00:00:00Z",
+  "signal_score": 53,
+  "signal_band": "warm",
+  "summary": "Seeded envelope. A smart ring that calls your daughter when grandma's heart rhythm flags afib — without her knowing she's wearing a med device. Live web research has not run yet; invoke 'npm run research -- --id wearables_smart_ring_for_seniors' to populate citations.",
+  "citations": [],
+  "competitors": [],
+  "papers": [],
+  "dead_saas_matches": [
+    {
+      "failure_id": "lilium",
+      "rationale": "Risk profile overlaps Lilium (Hardware scaling chasm; regulatory delays; capital intensity exceeded projections)."
+    },
+    {
+      "failure_id": "northvolt",
+      "rationale": "Risk profile overlaps Northvolt (Manufacturing execution failure; scaling complexity underestimated)."
+    }
+  ],
+  "yc_rfs_matches": [],
+  "a16z_thesis_matches": [],
+  "regulatory_landscape": {
+    "jurisdictions": [],
+    "summary": "Pending live enrichment."
+  },
+  "agent_trace": {
+    "openclaw_run_id": "seed-wearables_smart_ring_for_seniors-1118234008",
+    "started_at": "2026-05-16T00:00:00Z",
+    "ended_at": "2026-05-16T00:00:01Z",
+    "truncated": false,
+    "nodes": [
+      {
+        "name": "seed",
+        "status": "ok",
+        "duration_ms": 1,
+        "notes": "deterministic placeholder"
+      }
+    ],
+    "errors": []
+  },
+  "confidence": 0.2,
+  "history": [
+    {
+      "crawled_at": "2026-05-16T00:00:00Z",
+      "signal_score": 53,
+      "delta": "initial seed"
+    }
+  ],
+  "version": "0.1.0-seed"
+}

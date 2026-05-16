@@ -1,0 +1,26 @@
+{
+  "$schema_version": "1.0.0",
+  "modules": [
+    { "id": "load_corpus",        "kind": "io",        "outputs": "Blueprint[]",          "implemented": true,  "ref": "../research/orchestrator.mjs" },
+    { "id": "load_blueprint",     "kind": "io",        "outputs": "Blueprint",            "implemented": true,  "ref": "app/src/lib/corpus.ts" },
+    { "id": "load_research",      "kind": "io",        "outputs": "ResearchEnvelope",     "implemented": true,  "ref": "app/src/lib/corpus.ts" },
+    { "id": "load_archetypes",    "kind": "io",        "outputs": "Archetype[]",          "implemented": true,  "ref": "phase2/data/failures.json" },
+    { "id": "filter",             "kind": "transform", "outputs": "Blueprint[]",          "implemented": true,  "ref": "app/src/lib/corpus.ts" },
+    { "id": "moat_scorer",        "kind": "score",     "outputs": "Score",                "implemented": true,  "ref": "app/src/app/api/corsair/route.ts" },
+    { "id": "archetype_matcher",  "kind": "match",     "outputs": "Match[]",              "implemented": true,  "ref": "app/scripts/build-corpus.mjs" },
+    { "id": "query_expansion",    "kind": "transform", "outputs": "Query[]",              "implemented": true,  "ref": "agents/research/nodes/query_expansion.mjs" },
+    { "id": "multi_source_search","kind": "search",    "outputs": "RawResult[]",          "implemented": true,  "ref": "agents/research/nodes/multi_source_search.mjs" },
+    { "id": "browser_crawl",      "kind": "browser",   "outputs": "Page[]",               "implemented": true,  "ref": "agents/research/nodes/browser_crawl.mjs" },
+    { "id": "extract",            "kind": "transform", "outputs": "Citation[]",           "implemented": true,  "ref": "agents/research/nodes/extract.mjs" },
+    { "id": "dedupe",             "kind": "transform", "outputs": "Citation[]",           "implemented": true,  "ref": "agents/research/nodes/dedupe.mjs" },
+    { "id": "score",              "kind": "score",     "outputs": "Signal",               "implemented": true,  "ref": "agents/research/nodes/score.mjs" },
+    { "id": "validate",           "kind": "validate",  "outputs": "boolean",              "implemented": true,  "ref": "agents/research/nodes/validate.mjs" },
+    { "id": "persist",            "kind": "io",        "outputs": "Envelope",             "implemented": true,  "ref": "agents/research/nodes/persist.mjs" },
+    { "id": "render_prd",         "kind": "render",    "outputs": "string",               "implemented": false, "ref": "TODO" },
+    { "id": "compose_ranking",    "kind": "render",    "outputs": "string",               "implemented": true,  "ref": "app/src/app/api/corsair/route.ts" },
+    { "id": "compose_defense",    "kind": "render",    "outputs": "DefensePlan",          "implemented": false, "ref": "TODO" },
+    { "id": "compose_plan",       "kind": "render",    "outputs": "ExpansionPlan",        "implemented": false, "ref": "TODO" },
+    { "id": "synthesize_target",  "kind": "transform", "outputs": "SyntheticBlueprint",   "implemented": true,  "ref": "app/src/app/api/research/freeform/route.ts" },
+    { "id": "hitl_gate",          "kind": "gate",      "outputs": "Approval",             "implemented": false, "ref": "TODO: surface in /corsair UI" }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://idea-browser.local/schemas/research.schema.json",
+  "title": "Corsair Research Envelope",
+  "description": "Versioned, cited research envelope per blueprint.",
+  "type": "object",
+  "required": [
+    "blueprint_id",
+    "last_crawled_at",
+    "signal_score",
+    "signal_band",
+    "summary",
+    "citations",
+    "competitors",
+    "papers",
+    "dead_saas_matches",
+    "yc_rfs_matches",
+    "a16z_thesis_matches",
+    "regulatory_landscape",
+    "agent_trace",
+    "confidence",
+    "history",
+    "version"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "blueprint_id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "last_crawled_at": { "type": "string", "format": "date-time" },
+    "signal_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "signal_band": { "type": "string", "enum": ["cold", "warm", "hot", "nuclear"] },
+    "summary": { "type": "string" },
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["citation_id", "url", "title", "source_class", "retrieved_at"],
+        "properties": {
+          "citation_id": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "title": { "type": "string" },
+          "source_class": {
+            "type": "string",
+            "enum": ["paper", "post_mortem", "news", "regulatory", "vc_thesis", "yc_rfs", "a16z", "founder_writeup", "dataset", "repo", "podcast", "social"]
+          },
+          "retrieved_at": { "type": "string", "format": "date-time" },
+          "snippet": { "type": "string" },
+          "sha256": { "type": "string" },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "superseded_by": { "type": "string" },
+          "paywalled": { "type": "boolean" }
+        }
+      }
+    },
+    "competitors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status", "threat_level"],
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string" },
+          "status": { "type": "string", "enum": ["active", "dead", "acquired", "stealth"] },
+          "funding_usd": { "type": ["number", "null"] },
+          "founded": { "type": ["integer", "null"] },
+          "one_liner": { "type": "string" },
+          "threat_level": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+          "citation_id": { "type": "string" }
+        }
+      }
+    },
+    "papers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "url", "relevance"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "abstract": { "type": "string" },
+          "venue": { "type": "string" },
+          "year": { "type": "integer" },
+          "relevance": { "type": "number", "minimum": 0, "maximum": 1 },
+          "citation_id": { "type": "string" }
+        }
+      }
+    },
+    "dead_saas_matches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["failure_id", "rationale"],
+        "properties": {
+          "failure_id": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "yc_rfs_matches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["anchor", "url", "rationale"],
+        "properties": {
+          "anchor": { "type": "string" },
+          "url": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "a16z_thesis_matches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "url", "rationale"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "regulatory_landscape": {
+      "type": "object",
+      "required": ["jurisdictions", "summary"],
+      "properties": {
+        "jurisdictions": { "type": "array", "items": { "type": "string" } },
+        "summary": { "type": "string" },
+        "citation_ids": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "agent_trace": {
+      "type": "object",
+      "required": ["openclaw_run_id", "nodes"],
+      "properties": {
+        "openclaw_run_id": { "type": "string" },
+        "started_at": { "type": "string", "format": "date-time" },
+        "ended_at": { "type": "string", "format": "date-time" },
+        "truncated": { "type": "boolean" },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "status"],
+            "properties": {
+              "name": { "type": "string" },
+              "status": { "type": "string", "enum": ["ok", "error", "skipped", "partial"] },
+              "duration_ms": { "type": "integer" },
+              "notes": { "type": "string" }
+            }
+          }
+        },
+        "errors": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["crawled_at", "signal_score"],
+        "properties": {
+          "crawled_at": { "type": "string", "format": "date-time" },
+          "signal_score": { "type": "integer" },
+          "delta": { "type": "string" }
+        }
+      }
+    },
+    "version": { "type": "string" }
+  }
+}

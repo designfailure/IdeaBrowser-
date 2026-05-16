@@ -1,0 +1,77 @@
+{
+  "$schema_version": "1.0.0",
+  "generated_at": "2026-05-16T00:00:00Z",
+  "source": "phase1/phase1_postmortem.md",
+  "archetypes": [
+    {
+      "id": "fake_ai_trap",
+      "name": "Fake AI Trap",
+      "pattern": "Human labor disguised as AI; no genuine automation",
+      "inversion": "Verifiable AI-native operations with transparent automation metrics"
+    },
+    {
+      "id": "thin_wrapper_syndrome",
+      "name": "Thin Wrapper Syndrome",
+      "pattern": "No proprietary data; easily replicated by foundational models",
+      "inversion": "Deep vertical AI with domain-specific data flywheels"
+    },
+    {
+      "id": "hardware_scaling_chasm",
+      "name": "Hardware Scaling Chasm",
+      "pattern": "R&D success ≠ manufacturing success",
+      "inversion": "Asset-light hardware intelligence (software that optimizes hardware)"
+    },
+    {
+      "id": "unsustainable_unit_economics",
+      "name": "Unsustainable Unit Economics",
+      "pattern": "Growth funded losses; no path to contribution margin",
+      "inversion": "Outcome-based pricing with AI-driven cost structure optimization"
+    },
+    {
+      "id": "regulatory_blind_spot",
+      "name": "Regulatory Blind Spot",
+      "pattern": "Operating in legal gray areas; targeting vulnerable users",
+      "inversion": "Compliance-first architecture; regulatory moat as competitive advantage"
+    },
+    {
+      "id": "commoditization_collapse",
+      "name": "Commoditization Collapse",
+      "pattern": "Adjacent to hyperscalers or foundational models",
+      "inversion": "Niche vertical depth where hyperscalers won't go"
+    },
+    {
+      "id": "market_timing_failure",
+      "name": "Market Timing Failure",
+      "pattern": "Built on temporary demand; no durable behavioral shift",
+      "inversion": "Identify permanent behavioral changes accelerated by AI adoption"
+    },
+    {
+      "id": "governance_failure",
+      "name": "Governance Failure",
+      "pattern": "Poor financial controls; lack of investor transparency",
+      "inversion": "AI-native financial governance as a product feature"
+    }
+  ],
+  "failures": [
+    { "rank": 1, "name": "Builder.ai", "vertical": "AI/SaaS", "funding_lost_usd": 445000000, "cause": "Business model fraud — human labor disguised as AI; lack of financial governance", "lesson": "Authenticity in AI is existential; governance is infrastructure", "opportunity": "Genuine AI-native software delivery platforms with transparent automation metrics", "archetypes": ["fake_ai_trap", "governance_failure"] },
+    { "rank": 2, "name": "Adept AI", "vertical": "AI/ML Agents", "funding_lost_usd": 415000000, "cause": "Commoditization by foundational models; no proprietary data moat; capital intensity", "lesson": "Thin AI wrappers have no moat; vertical depth + proprietary data is the only defense", "opportunity": "Deep-vertical agentic AI with domain-specific training data and workflow lock-in", "archetypes": ["thin_wrapper_syndrome", "commoditization_collapse"] },
+    { "rank": 3, "name": "Jasper AI", "vertical": "AI Content SaaS", "funding_lost_usd": 143000000, "cause": "Rapid commoditization by GPT-4/Claude; no retention loop; no workflow moat", "lesson": "Content generation is a feature, not a company; moat must be workflow, not output", "opportunity": "AI-native content operations platforms with memory, brand voice, and distribution integration", "archetypes": ["thin_wrapper_syndrome", "commoditization_collapse"] },
+    { "rank": 4, "name": "Lilium", "vertical": "Aviation / eVTOL", "funding_lost_usd": 1000000000, "cause": "Hardware scaling chasm; regulatory delays; capital intensity exceeded projections", "lesson": "Hardware requires patient capital and realistic timelines; R&D ≠ commercialization", "opportunity": "Urban air mobility infrastructure (vertiports, air traffic management, charging networks)", "archetypes": ["hardware_scaling_chasm", "regulatory_blind_spot"] },
+    { "rank": 5, "name": "Northvolt", "vertical": "CleanTech / Batteries", "funding_lost_usd": 15000000000, "cause": "Manufacturing execution failure; scaling complexity underestimated", "lesson": "Deep manufacturing requires operational excellence, not just engineering vision", "opportunity": "Battery recycling, second-life battery systems, and AI-driven manufacturing optimization", "archetypes": ["hardware_scaling_chasm"] },
+    { "rank": 6, "name": "Vroom", "vertical": "Automotive E-Commerce", "funding_lost_usd": 700000000, "cause": "High operational costs; inventory management failure; macroeconomic headwinds", "lesson": "Disrupting physical asset markets requires operational mastery, not just digital UX", "opportunity": "AI-native used vehicle inspection, pricing, and financing platforms (asset-light)", "archetypes": ["unsustainable_unit_economics"] },
+    { "rank": 7, "name": "Convoy", "vertical": "Logistics / Freight", "funding_lost_usd": 900000000, "cause": "Low-margin industry; intense competition; unit economics never worked", "lesson": "Marketplace businesses in commoditized industries require network density before profitability", "opportunity": "Niche freight intelligence — specialized cargo (temperature-controlled, hazmat, last-mile)", "archetypes": ["unsustainable_unit_economics", "commoditization_collapse"] },
+    { "rank": 8, "name": "Getir", "vertical": "Q-Commerce / Delivery", "funding_lost_usd": 1500000000, "cause": "Unsustainable unit economics; over-expansion; delivery cost structure unworkable", "lesson": "Speed and convenience do not guarantee profitability; density is everything in delivery", "opportunity": "Hyperlocal inventory intelligence and dark store optimization platforms", "archetypes": ["unsustainable_unit_economics", "market_timing_failure"] },
+    { "rank": 9, "name": "Dave", "vertical": "Fintech / Neobank", "funding_lost_usd": 300000000, "cause": "Intense competition; difficulty achieving profitability; commoditized product", "lesson": "Neobanking without a clear moat (community, data, vertical) is a race to zero", "opportunity": "Vertical neobanks for specific professions (gig workers, freelancers, tradespeople) with embedded insurance and tax", "archetypes": ["commoditization_collapse"] },
+    { "rank": 10, "name": "EasyKnock", "vertical": "Fintech / Real Estate", "funding_lost_usd": null, "cause": "Legally questionable sale-leaseback model; predatory practices; regulatory collapse", "lesson": "Business models targeting vulnerable populations face existential regulatory risk", "opportunity": "Ethical home equity access platforms with transparent, consumer-protective structures", "archetypes": ["regulatory_blind_spot"] },
+    { "rank": 11, "name": "Sprinklr", "vertical": "Enterprise SaaS", "funding_lost_usd": 580000000, "cause": "Failure to demonstrate clear ROI; complex product; market consolidation", "lesson": "Enterprise SaaS must prove ROI in 90 days or face churn; complexity kills adoption", "opportunity": "AI-native social intelligence platforms with automated ROI dashboards and outcome-based pricing", "archetypes": ["unsustainable_unit_economics"] },
+    { "rank": 12, "name": "Sumo Logic", "vertical": "Enterprise SaaS / Observability", "funding_lost_usd": 340000000, "cause": "Intense competition from AWS/Datadog; difficulty scaling profitably", "lesson": "Infrastructure SaaS adjacent to hyperscalers is a dangerous position", "opportunity": "AI-native observability for edge computing and IoT — outside hyperscaler territory", "archetypes": ["commoditization_collapse"] },
+    { "rank": 13, "name": "Fastly", "vertical": "Edge Computing / CDN", "funding_lost_usd": 219000000, "cause": "Commoditization by AWS CloudFront, Cloudflare; pricing pressure", "lesson": "Edge infrastructure is a utility; value must be in the intelligence layer above it", "opportunity": "AI inference at the edge — low-latency AI processing for real-time applications", "archetypes": ["commoditization_collapse"] },
+    { "rank": 14, "name": "Canoo", "vertical": "Electric Vehicles", "funding_lost_usd": null, "cause": "Production scaling failure; high cash burn; execution gap", "lesson": "EV manufacturing requires automotive-grade operational discipline", "opportunity": "EV fleet management software and charging infrastructure optimization (asset-light)", "archetypes": ["hardware_scaling_chasm"] },
+    { "rank": 15, "name": "Rain AI", "vertical": "AI Hardware / Neuromorphic", "funding_lost_usd": null, "cause": "Semiconductor fabrication complexity; prototype-to-production gap", "lesson": "Chip design requires decades of expertise; software-defined approaches are more viable", "opportunity": "AI inference optimization software — achieving hardware-like performance through software", "archetypes": ["hardware_scaling_chasm"] },
+    { "rank": 16, "name": "Byju's", "vertical": "EdTech", "funding_lost_usd": null, "cause": "Unsustainable growth; lack of financial transparency; post-COVID demand collapse", "lesson": "EdTech must prove learning outcomes, not just engagement; governance is non-negotiable", "opportunity": "AI-native adaptive learning with measurable outcome guarantees and employer integration", "archetypes": ["governance_failure", "market_timing_failure"] },
+    { "rank": 17, "name": "Plenty Unlimited", "vertical": "AgTech / Vertical Farming", "funding_lost_usd": null, "cause": "Unsustainable unit economics; energy costs exceeded projections", "lesson": "Indoor farming economics require energy breakthroughs; software-first AgTech is more viable", "opportunity": "AI-driven precision agriculture for outdoor farming — soil intelligence, yield optimization", "archetypes": ["unsustainable_unit_economics", "hardware_scaling_chasm"] },
+    { "rank": 18, "name": "Pandion", "vertical": "Logistics / Package Delivery", "funding_lost_usd": null, "cause": "Market timing failure; pandemic boom collapsed; VC funding dried up", "lesson": "Timing is a moat; businesses built on temporary demand spikes are fragile", "opportunity": "Returns logistics optimization — the $800B reverse logistics problem remains unsolved", "archetypes": ["market_timing_failure"] },
+    { "rank": 19, "name": "Cushion", "vertical": "Fintech / Fee Recovery", "funding_lost_usd": null, "cause": "Market too small; business model not venture-scale", "lesson": "Real problems don't always equal venture-scale markets; TAM validation is critical", "opportunity": "Embedded financial advocacy — AI agents that negotiate fees, rates, and terms on behalf of consumers at scale", "archetypes": ["unsustainable_unit_economics"] },
+    { "rank": 20, "name": "Babylon Health", "vertical": "HealthTech / AI Diagnostics", "funding_lost_usd": null, "cause": "Regulatory complexity; overpromised AI capabilities; unit economics; market access", "lesson": "Healthcare AI must be clinically validated, not just technologically impressive", "opportunity": "AI-native care navigation platforms that augment (not replace) clinical decision-making", "archetypes": ["regulatory_blind_spot", "fake_ai_trap"] }
+  ]
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "home_appliances_predictive_repair_concierge",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "An appliance concierge that books your dishwasher's repair before it floods your kitchen.",
+    "core_problem": "120M US households own 6+ major appliances with avg 8-12 yr life; no one tracks failure signals; repair scheduling is reactive and expensive.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Audio-vibration agent on phone classifies pump/motor wear; concierge agent books repair via local-tech network.",
+    "business_model": "subscription",
+    "monetization_logic": "$9-19/mo per household + $25-50 per repair referral fee.",
+    "distribution_strategy": "Insurance carrier partnerships (renters/homeowners) + retail (Best Buy Geek Squad).",
+    "retention_loop": "Per-appliance signature + service history lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-model wear corpus across millions improves prediction." },
+    "scalability_score": 7,
+    "scalability_rationale": "B2B2C through insurance accelerates; local-tech network density gates growth.",
+    "billion_dollar_path": "Stage 1: dishwashers + washers + dryers. Stage 2: HVAC + water heater. Stage 3: full home health OS bundled with insurance.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own the per-model wear corpus, not a UI on Yelp",
+      "unsustainable_unit_economics: subscription + repair referrals keep ARPU healthy"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-model wear corpus is asymmetric data; competitors triage from generic forums.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + edge audio ML",
+      "agents": ["hermes:audio_classifier", "openclaw:repair_dag", "hermes:tech_router"],
+      "data": "Per-model audio signatures, service history, parts availability.",
+      "infra": "AWS + S3; SOC 2.",
+      "hitl": "Tech reviews any 'do not use' alert before notification; insurance partner approves claim escalations."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Owner gets an SMS 'Dishwasher pump degrading; tech booked Wed 10am'."
+  },
+  {
+    "id": "home_appliances_energy_optimizer",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "A home energy brain that runs your appliances when electricity is cheap and pays you when the grid needs power.",
+    "core_problem": "85M US homes pay variable utility rates without optimization; smart-thermostat ecosystem (Nest) optimizes one device.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Forecasting agent ingests utility tariff + solar production; scheduling agent shifts dishwasher/dryer/EV charge to off-peak; DR-arbitrage agent earns from utility programs.",
+    "business_model": "subscription",
+    "monetization_logic": "$9/mo + 20% of measured savings + DR earnings split.",
+    "distribution_strategy": "Smart-meter utility partnerships + retail (Home Depot, Costco).",
+    "retention_loop": "Per-home tariff + appliance fingerprint lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-utility tariff + per-home appliance corpus improves recommendations." },
+    "scalability_score": 8,
+    "scalability_rationale": "Software-only over WiFi-connected appliances; utility partnerships accelerate.",
+    "billion_dollar_path": "Stage 1: high-tariff metros. Stage 2: nationwide. Stage 3: V2G + battery-arbitrage bundle.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own per-utility + per-home model",
+      "regulatory_blind_spot: state PUC + utility data sharing rules"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-home + per-tariff data is asymmetric; competitors optimize one device.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + Matter + OpenADR",
+      "agents": ["hermes:tariff_forecaster", "openclaw:scheduling_dag", "hermes:dr_settler"],
+      "data": "Per-home appliance schedules, utility tariffs, weather forecasts.",
+      "infra": "AWS + TimescaleDB; per-state PUC compliance.",
+      "hitl": "User approves any new appliance integration; utility partner approves DR participation."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Owner sees a monthly savings + DR-earnings statement; appliances run silently optimized."
+  },
+  {
+    "id": "home_appliances_water_leak_intervention",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "Water leak protection that shuts off the main valve before $10k of damage.",
+    "core_problem": "$13B/yr in US insurance claims from water damage; existing solutions (Flo, Moen) detect but lack ML-based intervention timing.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Flow-pattern agent classifies normal vs leak; control agent shuts valve + notifies owner with damage estimate.",
+    "business_model": "hardware_plus_software",
+    "monetization_logic": "$199 device + $9/mo monitoring + insurance premium discount kickback.",
+    "distribution_strategy": "Insurance carrier bundles (State Farm, Allstate) + plumber installer channel.",
+    "retention_loop": "Per-home flow signature lock + insurance discount.",
+    "moat_potential": { "class": "data", "rationale": "Per-home flow corpus + insurance partnership improves trigger calibration." },
+    "scalability_score": 7,
+    "scalability_rationale": "Hardware install gates pace; software margins after.",
+    "billion_dollar_path": "Stage 1: residential. Stage 2: SMB + multi-family. Stage 3: full home risk-monitoring platform.",
+    "failure_avoidance": [
+      "hardware_scaling_chasm: partner with existing plumbing OEMs for hardware",
+      "regulatory_blind_spot: NSF + UPC plumbing code compliance"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Insurance partnership + intervention moat compounds; reject vanity device sales.",
+    "technical_mvp_sketch": {
+      "stack": "Embedded firmware + Python + Postgres + AWS IoT",
+      "agents": ["hermes:flow_classifier", "openclaw:shutoff_dag", "hermes:insurance_router"],
+      "data": "Per-home flow patterns, leak corpus, insurance claim history.",
+      "infra": "AWS IoT + Snowflake; SOC 2.",
+      "hitl": "Owner can override shutoff; insurance partner approves any claim flag."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Owner gets an SMS 'Leak detected, valve closed, plumber Sue arriving 4pm'."
+  },
+  {
+    "id": "home_appliances_kitchen_inventory_voice",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "A voice-first kitchen inventory that knows when your milk expires and reorders.",
+    "core_problem": "70% of US households waste $1,500/yr on spoiled food; existing apps require manual entry; no one keeps it up.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Vision agent on smart fridge cam + voice agent for verbal logging; expiration agent reorders via Instacart/Amazon.",
+    "business_model": "subscription",
+    "monetization_logic": "$5/mo + Instacart affiliate referral revenue.",
+    "distribution_strategy": "Smart fridge OEM partnerships (Samsung, LG) + voice-first via Echo Show.",
+    "retention_loop": "Per-household inventory + reorder pattern lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-household consumption pattern improves reorder timing." },
+    "scalability_score": 7,
+    "scalability_rationale": "Voice + vision; OEM integration depth gates competitors.",
+    "billion_dollar_path": "Stage 1: smart fridge bundle. Stage 2: pantry + freezer expansion. Stage 3: full household-supply autopilot.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own the per-household consumption corpus",
+      "commoditization_collapse: voice + reorder lock vs manual entry apps"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-household consumption data is asymmetric; grocery delivery sees only baskets.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + Whisper + custom CV",
+      "agents": ["hermes:inventory_capturer", "openclaw:reorder_dag", "hermes:expiration_predictor"],
+      "data": "Per-household inventory, consumption velocity, brand preferences.",
+      "infra": "AWS + S3; per-OEM data sharing agreements.",
+      "hitl": "Owner approves any reorder >$50."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "Owner says 'finished the last yogurt'; agent reorders + updates list."
+  },
+  {
+    "id": "home_appliances_air_quality_intervention",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "Air quality monitoring that triggers your HVAC + purifier before you smell smoke.",
+    "core_problem": "85M US households face seasonal AQI hazards; existing monitors (Awair, IQAir) display but don't act.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Forecasting agent ingests AQI + wildfire feeds; control agent triggers HVAC mode + purifier intensity per zone.",
+    "business_model": "subscription",
+    "monetization_logic": "$199 sensor + $7/mo + insurance discount partnership.",
+    "distribution_strategy": "Insurance carrier + HVAC partner channel; PLG via wildfire-season SMS opt-in.",
+    "retention_loop": "Per-home air signature + intervention history lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-home + per-event response corpus improves HVAC orchestration." },
+    "scalability_score": 7,
+    "scalability_rationale": "Sensor install gates; software scales.",
+    "billion_dollar_path": "Stage 1: wildfire-prone metros. Stage 2: nationwide. Stage 3: full indoor-environment OS bundled with health insurance.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own the AQI + HVAC orchestration model",
+      "hardware_scaling_chasm: partner with HVAC OEMs"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Per-home + per-event response data is asymmetric.",
+    "technical_mvp_sketch": {
+      "stack": "Embedded + Python + Postgres + Matter + AirNow API",
+      "agents": ["hermes:aqi_forecaster", "openclaw:hvac_orchestration_dag", "hermes:health_advisor"],
+      "data": "Per-home sensor telemetry, AQI feeds, HVAC schedules.",
+      "infra": "AWS IoT + Snowflake; HIPAA-aligned for health partners.",
+      "hitl": "Owner can override; HVAC tech reviews any system-stress alert."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Owner gets SMS 'AQI rising, HVAC switched to recirculate, purifiers max'."
+  },
+  {
+    "id": "home_appliances_warranty_advocate",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "An AI advocate that fights your warranty claim for you when LG denies it.",
+    "core_problem": "$8B/yr in US appliance warranty claims are denied or stalled; consumers give up; manufacturers profit from friction.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Claim-drafting agent generates evidence + manufacturer-specific letters; escalation agent chains to BBB + AG offices.",
+    "business_model": "outcome_based",
+    "monetization_logic": "20% of recovered warranty value; minimum $29.",
+    "distribution_strategy": "Retail point-of-sale (Best Buy, Costco) + community channels (Reddit r/laundry).",
+    "retention_loop": "Per-manufacturer dispute corpus compounds.",
+    "moat_potential": { "class": "data", "rationale": "Per-manufacturer denial-pattern data improves win rates; competitors must rebuild." },
+    "scalability_score": 6,
+    "scalability_rationale": "Mid-tail; community channel; outcome-based ARPU healthy.",
+    "billion_dollar_path": "Stage 1: appliances. Stage 2: electronics + auto. Stage 3: full consumer-warranty platform.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state UDAP + Magnuson-Moss Act compliance",
+      "unsustainable_unit_economics: outcome-based aligns ARR to wins"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible per-manufacturer corpus; reject vanity claim counts.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + DocuSign",
+      "agents": ["hermes:claim_drafter", "openclaw:escalation_dag", "hermes:legal_router"],
+      "data": "Per-manufacturer denial patterns, warranty terms, dispute outcomes.",
+      "infra": "AWS + RDS; SOC 2.",
+      "hitl": "Bar-licensed paralegal reviews any escalation to AG office."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Owner submits claim + photos; agent runs the dispute; owner approves any settlement."
+  },
+  {
+    "id": "home_appliances_install_concierge",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "An install concierge that turns 'they didn't bring the right vent' into a fixed dishwasher in one trip.",
+    "core_problem": "30% of appliance installs require return trips; retailer + installer coordination is broken; consumers absorb the cost.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Pre-install agent reads installation manual + asks questions of the customer; verification agent validates plumbing/electrical/dimensions.",
+    "business_model": "transaction_fee",
+    "monetization_logic": "$15-30 per install (paid by retailer or installer); upsell to warranty.",
+    "distribution_strategy": "Direct retailer integration (Best Buy, Lowe's, Home Depot).",
+    "retention_loop": "Per-retailer install-success rate compounds.",
+    "moat_potential": { "class": "embedded_workflow", "rationale": "Embedded in retailer checkout + installer app; switching breaks two systems." },
+    "scalability_score": 7,
+    "scalability_rationale": "Retailer sales cycle slow; once integrated, scales with their volume.",
+    "billion_dollar_path": "Stage 1: appliances. Stage 2: HVAC + flooring. Stage 3: full home-improvement install platform.",
+    "failure_avoidance": [
+      "commoditization_collapse: retailer + installer integration moat",
+      "unsustainable_unit_economics: per-install fee + warranty upsell"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for retailer + installer + customer; everyone wins.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + Twilio",
+      "agents": ["hermes:install_planner", "openclaw:verification_dag", "hermes:installer_router"],
+      "data": "Install manuals, retailer SKU specs, installer profiles, success rates.",
+      "infra": "AWS + RDS; PCI compliant.",
+      "hitl": "Installer approves any spec exception; ops reviews any failed install."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Customer answers 5 questions at checkout; install team arrives with the right parts."
+  },
+  {
+    "id": "home_appliances_solar_battery_optimizer",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "A solar + battery optimizer that earns you more than your panel installer told you.",
+    "core_problem": "5M US solar households leave money on the table; existing inverter apps (Tesla, Enphase) optimize within their own ecosystem only.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Production-forecasting agent + tariff-arbitrage agent decides charge/discharge/sell per 15-min window.",
+    "business_model": "subscription",
+    "monetization_logic": "$9/mo + 25% of measured incremental earnings.",
+    "distribution_strategy": "Solar installer partnerships + retail via inverter ecosystems.",
+    "retention_loop": "Per-home solar + tariff history lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-home production + tariff arbitrage corpus improves recommendations." },
+    "scalability_score": 8,
+    "scalability_rationale": "Software over heterogeneous inverter APIs; community channel.",
+    "billion_dollar_path": "Stage 1: residential solar+battery. Stage 2: V2G fold-in. Stage 3: full distributed-energy-resource (DER) platform.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own multi-inverter + multi-utility corpus",
+      "regulatory_blind_spot: per-utility net-metering rules"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Cross-inverter + cross-utility data is asymmetric; OEM apps see only their box.",
+    "technical_mvp_sketch": {
+      "stack": "Python + Postgres + Enphase/Tesla API + OpenADR",
+      "agents": ["hermes:production_forecaster", "openclaw:dispatch_dag", "hermes:utility_settler"],
+      "data": "Per-home production, tariff feeds, weather, inverter telemetry.",
+      "infra": "AWS + TimescaleDB; per-state PUC.",
+      "hitl": "Owner approves new utility partnership; ops reviews monthly settlement."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Owner sees a monthly earnings report; system optimizes silently."
+  },
+  {
+    "id": "home_appliances_aging_in_place_monitor",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "Passive aging-in-place monitoring that tells the family when grandma's routine breaks — without a wearable.",
+    "core_problem": "55M US adults 65+; 88% want to age in place; pendant alarms are stigmatized; cameras feel invasive.",
+    "emotional_driver": "belonging",
+    "ai_leverage": "Ambient sensor fusion (motion, water, appliance use) classifies normal vs concerning; family agent notifies adult children.",
+    "business_model": "subscription",
+    "monetization_logic": "$199 hardware + $39/mo monitoring; partial Medicare reimbursement TBD.",
+    "distribution_strategy": "Adult-children D2C + Medicare Advantage health-plan partnerships.",
+    "retention_loop": "Per-elder routine signature lock.",
+    "moat_potential": { "class": "data", "rationale": "Per-elder routine corpus improves anomaly detection." },
+    "scalability_score": 7,
+    "scalability_rationale": "Hardware install gates; software margins after.",
+    "billion_dollar_path": "Stage 1: D2C + insurance bundle. Stage 2: senior living facilities. Stage 3: full elder-care navigation OS.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: HIPAA + state telehealth alignment",
+      "fake_ai_trap: human reviews any 'concerning' alert before family notification"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible privacy-first elder-care brand; reject vanity sensor counts.",
+    "technical_mvp_sketch": {
+      "stack": "Embedded + Python + Postgres + AWS IoT",
+      "agents": ["hermes:routine_baseliner", "openclaw:anomaly_dag", "hermes:family_router"],
+      "data": "Per-elder ambient telemetry, routines, family preferences.",
+      "infra": "AWS + Snowflake; HIPAA-aligned, per-state.",
+      "hitl": "Trained ops reviews any 'urgent' alert before family or 911 contact."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Family gets a weekly digest; urgent SMS only when warranted."
+  },
+  {
+    "id": "home_appliances_robot_vacuum_intelligence",
+    "vertical": "home_appliances",
+    "version": "1.0.0",
+    "hook": "A meta-brain for your robot vacuum + mop that schedules around your day, not its own.",
+    "core_problem": "40M US robot vacuums (Roomba, Roborock) run blindly; users disable them after a week; the apps don't talk to each other.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Calendar + door-sensor fusion agent decides when to clean; multi-OEM agent orchestrates Roomba + Roborock + Eufy via API.",
+    "business_model": "subscription",
+    "monetization_logic": "$3/mo per device; parts + brushes affiliate.",
+    "distribution_strategy": "Smart-home community channels + retail bundles.",
+    "retention_loop": "Per-home schedule + multi-device orchestration lock.",
+    "moat_potential": { "class": "data", "rationale": "Cross-OEM behavior corpus improves orchestration." },
+    "scalability_score": 6,
+    "scalability_rationale": "Mid-tail; OEM API access gates.",
+    "billion_dollar_path": "Stage 1: vacuum orchestration. Stage 2: full multi-device home robot OS. Stage 3: home-cleaning service marketplace.",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own cross-OEM orchestration",
+      "commoditization_collapse: cross-OEM moat vs single-vendor apps"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable orchestration for the multi-OEM smart home; every owner benefits.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Python + Postgres + Matter + iRobot/Roborock API",
+      "agents": ["hermes:schedule_optimizer", "openclaw:orchestration_dag", "hermes:parts_orderer"],
+      "data": "Per-device cleaning history, calendar, door-sensor events.",
+      "infra": "AWS + RDS; OEM data-sharing reviews.",
+      "hitl": "Owner approves any new OEM integration."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Owner sets preferences once; vacuums run intelligently around the family's day."
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "finance_neobank_for_truckers",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "The neobank that closes a trucker's books while they sleep.",
+    "core_problem": "1.9M US owner-operators run their books in shoeboxes; existing neobanks treat them as 1099-W2 hybrids and miss IFTA, per-diem, and load-factoring economics.",
+    "emotional_driver": "autonomy",
+    "ai_leverage": "Vision agent ingests bills of lading + fuel receipts; ledger agent files IFTA quarterly; replaces a $4-6k/yr human bookkeeper.",
+    "business_model": "embedded_finance",
+    "monetization_logic": "$29/mo SaaS + 0.8% interchange + 1.5% factoring spread; net ARPU ~$110/mo at month 6.",
+    "distribution_strategy": "Truck-stop wedge + DAT/Truckstop.com partnerships; community via owner-operator subreddits and CDL TikTok.",
+    "retention_loop": "Quarter-locked filings + factored receivables create 90-day switching cost; data flywheel improves load-pricing recommendations.",
+    "moat_potential": { "class": "switching_cost", "rationale": "Quarterly filings + factored receivables create 90-day lock; load-data flywheel compounds." },
+    "scalability_score": 8,
+    "scalability_rationale": "TAM $2B SaaS + $10B factoring; constrained by trucker onboarding velocity, not technology.",
+    "billion_dollar_path": "Stage 1: solo owner-operators. Stage 2: small fleets (2-20). Stage 3: factoring marketplace + load-pricing data network sold to brokers.",
+    "failure_avoidance": [
+      "commoditization_collapse: vertical-deep with IFTA + factoring vs Dave's mass-market trap",
+      "regulatory_blind_spot: SOC 2 + state money-transmitter licenses scoped pre-launch"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible quarterly switching cost; cash-flow positive by month 9; reject growth at the cost of margin.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + tRPC + Postgres + Plaid + Unit.co",
+      "agents": ["openclaw:bookkeeping_dag", "hermes:receipt_extract", "hermes:ifta_filer"],
+      "data": "Receipts, BOLs, fuel cards, factoring ledger; per-trucker vector store for tax q&a.",
+      "infra": "Vercel + Supabase + Inngest cron; Sentry; LaunchDarkly.",
+      "hitl": "Operator approves filed returns >$5k or factoring advances >$25k."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "Trucker texts a photo of a receipt; agent files it; weekly digest in app; chat for q&a."
+  },
+  {
+    "id": "finance_embedded_tax_for_creators",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "Quarterly taxes that file themselves the moment a creator gets paid.",
+    "core_problem": "12M US 1099 creators owe quarterly estimated taxes and routinely under-withhold; April becomes a $4k surprise.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Income-classification agent watches Stripe/PayPal/Patreon webhooks; tax engine sweeps the right % into a sub-account; auto-files Form 1040-ES.",
+    "business_model": "embedded_finance",
+    "monetization_logic": "$19/mo + 0.3% on auto-swept funds; ARPU ~$32/mo.",
+    "distribution_strategy": "Stripe App Marketplace + Patreon partnership; PLG via 'Tax-Withheld Stripe link' wedge.",
+    "retention_loop": "IRS payment history is locked to the account; switching mid-year forfeits filing continuity.",
+    "moat_potential": { "class": "embedded_workflow", "rationale": "Sits inside payment webhooks; survives even if creator changes banks." },
+    "scalability_score": 8,
+    "scalability_rationale": "Webhook-driven; marginal cost is API calls, not human review.",
+    "billion_dollar_path": "Stage 1: solo creators. Stage 2: agencies + small studios. Stage 3: cross-border creator tax (EU VAT, UK PAYE).",
+    "failure_avoidance": [
+      "regulatory_blind_spot: tax filing is licensed; partner with a registered EFIN provider day one",
+      "thin_wrapper_syndrome: own the IRS-filing pipeline, not a UI on top of TurboTax"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Own the payment-webhook data layer; competitors see only end-of-year statements while we see every transaction.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Cloudflare Workers + Stripe webhooks + Increase.com",
+      "agents": ["hermes:income_classifier", "hermes:tax_engine", "openclaw:filing_dag"],
+      "data": "Webhook stream from Stripe/PayPal; IRS publication index for deductions.",
+      "infra": "Cloudflare D1 + R2; Sentry; Datadog.",
+      "hitl": "Operator reviews any return >$10k owed or any audit flag from the IRS."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Creator never opens the app until April; receives a 'You owe $0, we already paid it' email."
+  },
+  {
+    "id": "finance_ai_underwriter_for_smb_credit",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "A 60-second SMB credit decision built on cash-flow telemetry, not credit bureau lag.",
+    "core_problem": "30M US SMBs are underwritten on FICO + tax returns months stale; the data exists in Stripe/QuickBooks but no underwriter ingests it natively.",
+    "emotional_driver": "autonomy",
+    "ai_leverage": "Cash-flow agent ingests Stripe/Plaid/QuickBooks streams; underwriting agent renders a decision + price in 60s; replaces a 2-week bank pull.",
+    "business_model": "outcome_based",
+    "monetization_logic": "1.5-3% origination fee + 50-100bps servicing; charged only on funded loans.",
+    "distribution_strategy": "Embedded inside vertical SaaS (Toast, Mindbody, Jobber); revenue share with the SaaS.",
+    "retention_loop": "Cash-flow data is continuously re-scored; SMBs return for line increases; SaaS partner gets a new monetization line.",
+    "moat_potential": { "class": "data", "rationale": "Multi-source cash-flow corpus across verticals improves underwriting; partners cannot leave without losing decisioning." },
+    "scalability_score": 9,
+    "scalability_rationale": "API-driven; capital is partner-supplied (warehouses); operating leverage is enormous.",
+    "billion_dollar_path": "Stage 1: embed in 5 vertical SaaS. Stage 2: own the warehouse facility. Stage 3: license decision engine to community banks.",
+    "failure_avoidance": [
+      "fake_ai_trap: publish quarterly automation-rate metrics + auditor letter",
+      "regulatory_blind_spot: ECOA/UDAAP-compliant adverse-action notices generated automatically"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Own the multi-source cash-flow data layer; underwriters relying on FICO are running blind.",
+    "technical_mvp_sketch": {
+      "stack": "Python + FastAPI + Postgres + Plaid + Codat + LendAPI",
+      "agents": ["hermes:cashflow_aggregator", "openclaw:underwriting_dag", "hermes:adverse_action_writer"],
+      "data": "Bank, AR, AP, payroll, Stripe; bureau supplement only.",
+      "infra": "AWS + RDS + KMS; SOC 2 Type II in year one.",
+      "hitl": "Compliance officer reviews any decline; risk officer approves any policy change."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "SMB clicks 'Get a $50k line' inside Toast; sees a price + accept button in 60 seconds."
+  },
+  {
+    "id": "finance_invoice_negotiator_agent",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "An AI agent that opens your medical, telecom, and SaaS invoices and negotiates them down — for free unless it wins.",
+    "core_problem": "US households overpay $2.4k/yr in negotiable bills (medical, telecom, gym, SaaS); existing services (Truebill, BillShark) charge 40% upfront and rarely touch medical.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Agent reads scanned bills, identifies negotiable line items, drafts dispute letters, and runs voice negotiation against billing reps; replaces a $50/hr billing advocate.",
+    "business_model": "outcome_based",
+    "monetization_logic": "30% of confirmed savings, billed monthly over 12 months; no upfront.",
+    "distribution_strategy": "Direct-to-consumer via TikTok 'send me your hospital bill' + insurance broker partnerships.",
+    "retention_loop": "Bills keep arriving; agent's negotiation history with each provider compounds — Anthem learns the agent always wins, settles faster.",
+    "moat_potential": { "class": "data", "rationale": "Per-provider negotiation success rates compound; new entrants start at zero." },
+    "scalability_score": 7,
+    "scalability_rationale": "Voice + document; bottleneck is per-provider integration and call wait times.",
+    "billion_dollar_path": "Stage 1: medical bill negotiation. Stage 2: full-stack billing-advocacy platform. Stage 3: B2B for HR teams as employee benefit.",
+    "failure_avoidance": [
+      "unsustainable_unit_economics: outcome-based pricing aligns ARR to recovered savings",
+      "regulatory_blind_spot: HIPAA-aligned BAA before touching any medical bill"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Free unless we win — economics enforce conviction; reject vanity DAU.",
+    "technical_mvp_sketch": {
+      "stack": "Python + FastAPI + Twilio Voice + Vapi.ai + Postgres",
+      "agents": ["hermes:bill_parser", "openclaw:dispute_dag", "hermes:voice_negotiator"],
+      "data": "Per-provider call scripts, success rates, billing codes (CPT/HCPCS).",
+      "infra": "AWS + Twilio + Vapi; HIPAA-compliant logging.",
+      "hitl": "User approves any settlement over $500 or any release-of-claims clause."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "User snaps a bill; agent drafts a strategy; user clicks 'go'; weekly status updates."
+  },
+  {
+    "id": "finance_real_time_treasury_for_smb",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "Bloomberg Terminal for the 30M SMBs that can't afford a CFO.",
+    "core_problem": "SMBs make six-figure cash decisions on QuickBooks balances stale by 24-72h; treasury management is a fortune-500 luxury.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Forecast agent rebuilds 13-week cash forecast every hour from Plaid/Stripe; sweep agent moves idle balances into T-bills nightly.",
+    "business_model": "subscription",
+    "monetization_logic": "$199-799/mo by company size + 5bps on swept balances; ARPU $400+.",
+    "distribution_strategy": "Sales-led to 50-200 employee SMBs; CFO advisory firm partnership.",
+    "retention_loop": "Forecast accuracy improves with company history; switching forfeits 13-week visibility built up over months.",
+    "moat_potential": { "class": "switching_cost", "rationale": "Cash forecast and sweep policies are encoded in the system; unwinding takes weeks." },
+    "scalability_score": 8,
+    "scalability_rationale": "API + automation; sales cycle is the bottleneck, not delivery.",
+    "billion_dollar_path": "Stage 1: SMB treasury. Stage 2: embedded in vertical accounting software. Stage 3: AI CFO bundle (forecasting + AR + AP + tax).",
+    "failure_avoidance": [
+      "thin_wrapper_syndrome: own the forecasting model + sweep execution, not a wrapper on Plaid",
+      "fake_ai_trap: publish forecast-accuracy backtests quarterly"
+    ],
+    "validation_principle": "rothschild",
+    "validation_invocation": "Real-time cash visibility is asymmetric information; static QuickBooks users are flying blind.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Plaid + Modern Treasury",
+      "agents": ["hermes:forecast_engine", "openclaw:sweep_dag", "hermes:variance_explainer"],
+      "data": "Bank, AR, AP, payroll, vendor terms; macro rates feed.",
+      "infra": "AWS + RDS + KMS; SOC 2 Type II.",
+      "hitl": "CFO approves any sweep policy change; auto-revert on +/-15% forecast variance."
+    },
+    "ui_ux_operating_model": "dashboard_plus_chat",
+    "ui_ux_invocation": "Cash dashboard; chat asks 'what if I delay payroll 5 days' and gets a numerically grounded answer."
+  },
+  {
+    "id": "finance_compliance_copilot_for_community_banks",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "BSA/AML compliance copilot that turns 4,000 community banks into competitive fintechs.",
+    "core_problem": "Community banks spend 8-12% of opex on BSA/AML; vendor stacks (NICE Actimize) are mainframe-era and unaffordable for sub-$5B AUM.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Transaction-monitoring agent triages SAR alerts; KYC agent reviews ID + sanctions hits; replaces 3-5 FTEs per bank.",
+    "business_model": "subscription",
+    "monetization_logic": "$8-25k/mo by AUM tier + per-alert overage; ARPU $15k/mo.",
+    "distribution_strategy": "ICBA + state banking association partnerships; sales-led with regulator-friendly pitch.",
+    "retention_loop": "Alert-tuning history is bank-specific; switching loses years of false-positive suppression.",
+    "moat_potential": { "class": "regulatory", "rationale": "FFIEC examination-ready audit trails; competitors face years to reach parity." },
+    "scalability_score": 7,
+    "scalability_rationale": "Sales cycle 6-9 months; once integrated, expansion within bank is fast.",
+    "billion_dollar_path": "Stage 1: BSA/AML for community banks. Stage 2: full compliance suite (CRA, Reg E, Reg Z). Stage 3: license to credit unions globally.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: SR 11-7 model risk management documentation from day one",
+      "fake_ai_trap: human-in-the-loop on every SAR; transparent automation rate"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Regulatory moat compounds; switching costs are existential for banks under examination.",
+    "technical_mvp_sketch": {
+      "stack": "Python + FastAPI + Postgres + Snowflake + Sigma",
+      "agents": ["openclaw:tm_alert_dag", "hermes:kyc_reviewer", "hermes:sar_drafter"],
+      "data": "Core banking transactions, OFAC, FinCEN guidance, internal alert history.",
+      "infra": "AWS GovCloud-ready; SOC 2 Type II + ISO 27001.",
+      "hitl": "BSA officer reviews every SAR before filing; model committee approves tuning changes."
+    },
+    "ui_ux_operating_model": "dashboard_plus_chat",
+    "ui_ux_invocation": "BSA officer reviews triaged alerts in a queue; chat to ask 'why was this flagged' in plain English."
+  },
+  {
+    "id": "finance_ar_collections_agent",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "An AI collections agent that recovers 30-day-late invoices without souring the customer relationship.",
+    "core_problem": "$3.1T US B2B receivables run >30 days late; collections teams are expensive and abrasive; SMBs avoid hiring collectors entirely.",
+    "emotional_driver": "convenience",
+    "ai_leverage": "Voice + email agent runs tone-tuned dunning sequences; payment-plan agent negotiates terms within authority limits.",
+    "business_model": "outcome_based",
+    "monetization_logic": "8-15% of collected funds (vs 25-50% for traditional agencies); minimum $99/mo subscription.",
+    "distribution_strategy": "QuickBooks + Xero app marketplace; PLG with 'connect ledger, see who's overdue' wedge.",
+    "retention_loop": "Recovery rates improve with debtor history; ledger integration is sticky.",
+    "moat_potential": { "class": "data", "rationale": "Per-debtor payment behavior corpus improves negotiation tactics." },
+    "scalability_score": 8,
+    "scalability_rationale": "Voice + email scale linearly with API costs; no per-account human required.",
+    "billion_dollar_path": "Stage 1: SMB AR. Stage 2: mid-market ERP integrations. Stage 3: cross-creditor reputation network priced to debt buyers.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: FDCPA + state collection license footprint scoped pre-launch",
+      "unsustainable_unit_economics: outcome pricing keeps gross margin >70%"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Cash-flow positive on funds recovered; reject vanity DAU.",
+    "technical_mvp_sketch": {
+      "stack": "Python + FastAPI + Postgres + Vapi.ai + Twilio + Stripe",
+      "agents": ["openclaw:dunning_dag", "hermes:voice_collector", "hermes:payment_plan_negotiator"],
+      "data": "Ledger, debtor history, FDCPA scripts, dispute outcomes.",
+      "infra": "AWS + RDS; FDCPA-compliant call recording + retention.",
+      "hitl": "Operator approves any settlement <60% of face or any litigation referral."
+    },
+    "ui_ux_operating_model": "agent_mediated",
+    "ui_ux_invocation": "SMB sees an inbox of overdue invoices; clicks 'collect' on each; agent runs a 30-day campaign."
+  },
+  {
+    "id": "finance_sovereign_wealth_for_diaspora",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "A neobank for the 280M diaspora that needs to bank in three currencies and remit home weekly.",
+    "core_problem": "Diaspora workers pay 6-8% on remittances and lose another 3% to FX; existing solutions (Wise, Remitly) are remit-only and lack a real banking layer.",
+    "emotional_driver": "belonging",
+    "ai_leverage": "Multi-currency ledger agent rebalances across USD/EUR/GBP/INR/PHP nightly; remittance agent times transfers to favorable FX windows.",
+    "business_model": "embedded_finance",
+    "monetization_logic": "Free remit + 0.3% FX spread + 0.5% interchange; $0/mo; ARPU $11/mo.",
+    "distribution_strategy": "Diaspora community channels (Filipino nurses, Indian engineers, Nigerian fintechers); employer payroll partnerships.",
+    "retention_loop": "Remit history + bill-pay-back-home compounds; family in country of origin onboards into recipient app.",
+    "moat_potential": { "class": "network", "rationale": "Two-sided diaspora ↔ recipient network; switching breaks family payment rails." },
+    "scalability_score": 9,
+    "scalability_rationale": "$700B annual remittance market; community-driven CAC.",
+    "billion_dollar_path": "Stage 1: USA diaspora corridors. Stage 2: EU + UK + Gulf corridors. Stage 3: white-label remit rail to community banks.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: state MTL + EU PSD2 + RBI inward remit licenses pre-scoped",
+      "commoditization_collapse: own the recipient-side experience, not a Wise wrapper"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable infrastructure for diaspora financial life; the platform that makes others rich.",
+    "technical_mvp_sketch": {
+      "stack": "React Native + Node + Postgres + Currencycloud + Plaid",
+      "agents": ["hermes:fx_optimizer", "openclaw:remit_dag", "hermes:bill_pay_router"],
+      "data": "Per-corridor FX history, recipient bank rails, employer payroll calendars.",
+      "infra": "AWS + Cloudflare; SOC 2 + PCI; per-jurisdiction data residency.",
+      "hitl": "Compliance reviews any remit >$10k or any sanctioned-country flag."
+    },
+    "ui_ux_operating_model": "voice_first",
+    "ui_ux_invocation": "User says 'send 200 to mom' in native language; agent times the transfer and confirms via voice."
+  },
+  {
+    "id": "finance_options_strategist_for_retail",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "An options-strategy copilot that explains every Greek before you click buy.",
+    "core_problem": "26M US retail options traders execute spreads they don't understand; broker UIs (Robinhood, Schwab) hide risk and don't explain consequences.",
+    "emotional_driver": "mastery",
+    "ai_leverage": "Strategy agent translates intent ('I want upside on NVDA but cap loss at $500') to a defined-risk spread; risk agent simulates 1-30 day P&L paths.",
+    "business_model": "subscription",
+    "monetization_logic": "$29/mo + $99/mo Pro tier; no PFOB to avoid Robinhood-style misalignment.",
+    "distribution_strategy": "YouTube finance creator partnerships; PLG via free strategy-explainer that requires login to execute.",
+    "retention_loop": "Trade-journal + outcome tracking creates personalized risk profile; users return to log every position.",
+    "moat_potential": { "class": "brand", "rationale": "Trust-first brand in a space dominated by gambling-aesthetic apps." },
+    "scalability_score": 7,
+    "scalability_rationale": "Subscription model; broker integrations are the bottleneck.",
+    "billion_dollar_path": "Stage 1: options education + execution wrapper. Stage 2: hedge-as-a-service for ETF holders. Stage 3: licensed RIA layer.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: FINRA-compliant content review; not a broker-dealer day one",
+      "thin_wrapper_syndrome: own the simulation engine + journaling, not a UI on TastyTrade"
+    ],
+    "validation_principle": "buffett",
+    "validation_invocation": "Defensible brand built on transparent risk; reject PFOB-driven flow monetization.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Python + Postgres + Polygon.io + SnapTrade",
+      "agents": ["hermes:strategy_translator", "openclaw:risk_simulator", "hermes:journal_writer"],
+      "data": "Options chains, IV surface, user trade journal, outcome history.",
+      "infra": "AWS + RDS; SOC 2; FINRA-aligned record retention.",
+      "hitl": "Compliance reviews any new strategy template before user-facing release."
+    },
+    "ui_ux_operating_model": "conversational",
+    "ui_ux_invocation": "User describes intent in plain English; copilot returns a visualized trade with all Greeks."
+  },
+  {
+    "id": "finance_estate_planner_invisible",
+    "vertical": "finance",
+    "version": "1.0.0",
+    "hook": "An estate plan that updates itself every time you have a baby, buy a house, or change jobs.",
+    "core_problem": "67% of US adults have no estate plan; LegalZoom is one-shot and stale within 18 months; lawyers cost $2-5k upfront.",
+    "emotional_driver": "fear",
+    "ai_leverage": "Life-event agent watches Plaid + payroll + DMV + birth certificates (opt-in) and triggers will/trust amendments; legal agent drafts changes for attorney review.",
+    "business_model": "subscription",
+    "monetization_logic": "$15/mo individual, $25/mo family; bar-licensed attorney review priced per change ($99-299).",
+    "distribution_strategy": "Embedded in HR benefits stacks; D2C via 'free will draft' wedge.",
+    "retention_loop": "Estate plan is alive; switching loses continuity and triggers attorney re-review costs.",
+    "moat_potential": { "class": "switching_cost", "rationale": "Continuous estate-plan history; switching means paying for a fresh attorney review." },
+    "scalability_score": 7,
+    "scalability_rationale": "B2B2C via HR benefits scales fast; attorney review is the bottleneck.",
+    "billion_dollar_path": "Stage 1: D2C + HR benefits. Stage 2: probate concierge bundle. Stage 3: cross-jurisdiction estate concierge for HNW.",
+    "failure_avoidance": [
+      "regulatory_blind_spot: UPL boundaries clear; partner with bar-licensed attorneys per state",
+      "unsustainable_unit_economics: subscription + per-event upsell keeps CAC payback <12 months"
+    ],
+    "validation_principle": "medici",
+    "validation_invocation": "Indispensable life-event infrastructure for households + employers; both sides depend on us.",
+    "technical_mvp_sketch": {
+      "stack": "Next.js + Postgres + Plaid + DocuSign",
+      "agents": ["hermes:life_event_watcher", "openclaw:will_amendment_dag", "hermes:attorney_router"],
+      "data": "Will templates per state, life-event taxonomy, attorney panel.",
+      "infra": "AWS + KMS-encrypted document store; SOC 2 + state bar compliance.",
+      "hitl": "Bar-licensed attorney signs every binding amendment; user e-signs final."
+    },
+    "ui_ux_operating_model": "invisible",
+    "ui_ux_invocation": "Estate plan auto-updates after a life event; user gets a summary + 'approve' email."
+  }
+]
