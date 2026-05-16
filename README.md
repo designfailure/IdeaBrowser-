@@ -1,5 +1,9 @@
 # Corsair Idea Browser
 
+<img width="2560" height="1440" alt="corsair_idea_browser_spec" src="https://github.com/user-attachments/assets/28eec988-edcd-4794-b9b8-a5c3ce405f1a" />
+
+
+
 <img width="1258" height="1335" alt="the Corsair Idea Browser Armada" src="https://github.com/user-attachments/assets/c10e639e-9c18-4800-a98a-bd8aca744988" />
 
 
