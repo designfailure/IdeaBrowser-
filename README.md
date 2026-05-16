@@ -2,7 +2,9 @@
 
 <img width="2560" height="1440" alt="corsair_idea_browser_spec" src="https://github.com/user-attachments/assets/28eec988-edcd-4794-b9b8-a5c3ce405f1a" />
 
+The Corsair Idea Browser is an AI-native venture intelligence platform designed to transform static investment theses into a dynamic, evidence-backed decision engine. By integrating a structured 15-field "blueprint" schema with an automated Research DAG, the system synthesizes live market signals, competitive citations, and failure archetypes into a refreshable research cockpit for operators. Orchestrated by specialized agents like OpenClaw and Hermes, the solution ensures that every venture hypothesis is stress-tested against real-world data while maintaining strict Human-in-the-Loop governance to ensure sovereign oversight over irreversible actions.
 
+If this system successfully shifts venture design from static memos to live, cited signals, how might the role of a venture partner evolve when their primary value-add moves from information gathering to the strategic calibration of the agent's research budgets and governance thresholds?
 
 <img width="1258" height="1335" alt="the Corsair Idea Browser Armada" src="https://github.com/user-attachments/assets/c10e639e-9c18-4800-a98a-bd8aca744988" />
 
