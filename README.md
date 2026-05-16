@@ -1,5 +1,8 @@
 # Corsair Idea Browser
 
+<img width="1258" height="1335" alt="the Corsair Idea Browser Armada" src="https://github.com/user-attachments/assets/c10e639e-9c18-4800-a98a-bd8aca744988" />
+
+
 AI-native venture research cockpit. 130 blueprints × 13 verticals × 15 fields. Live-web research per blueprint. Browser-equipped Corsair agent layer. Built under the [Letter of Marque](./LETTER_OF_MARQUE.md).
 
 ## Quickstart
@@ -22,6 +25,9 @@ npm run research -- --id finance_neobank_for_truckers
 # Re-crawl an entire vertical
 npm run research -- --vertical robotics_physical_ai
 ```
+
+<img width="1272" height="649" alt="Corsair" src="https://github.com/user-attachments/assets/0ee0a9d3-05cc-4b3c-9832-f0d8737ed393" /> 
+
 
 ## Repository Layout
 
